@@ -1,5 +1,5 @@
 # Indice de Documentación
 
-- [User Stories](usersStories)
+- [User Stories](usersStories.md)
 - ER Models
 - Mockup
