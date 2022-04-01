@@ -1,0 +1,29 @@
+.NavBarContainer{
+    background-color: black;
+}
+.nav-link{
+    color:  rgb(255, 255, 255);
+    font-weight: 600;
+}
+.nav-link:hover{
+    color: goldenrod;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.navBar-style{
+    justify-content: flex-end;
+}
+.icono-collapse{
+    width: 50px;
+}
+.navbar-toggler-icon{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar-brand:hover{
+    transform: 1.1;
+    transition: 1s;
+
+}

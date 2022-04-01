@@ -1,0 +1,27 @@
+.footer{
+    background-color: black;
+    padding: 30px;
+}
+.contenedor-footer{
+    justify-content: flex-end;
+    align-items: center;
+}
+.texto-footer{
+    color: white;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-weight: 600;
+
+}
+.icono-redes{
+   padding: 5px;
+}
+.icono-redes:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.cajon-redes{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
