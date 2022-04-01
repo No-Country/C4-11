@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "PRODUCTS")
-@SQLDelete(sql = "UPDATE users SET soft_delete = true WHERE id=?")
+@SQLDelete(sql = "UPDATE products SET soft_delete = true WHERE id=?")
 @Where(clause = "soft_delete = false")
 public class ProductEntity {
 
