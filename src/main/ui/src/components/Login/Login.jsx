@@ -18,11 +18,11 @@ const Login = () => {
                 </ContenedorBoton>
             </form>
             <ContenedorParrafo><p>es la primera vez que ingresas?</p></ContenedorParrafo>
-            <div>
+            <ContenedorBotones>
                 <BotonGoogle>CONTINUAR CON GOOGLE</BotonGoogle>
                 <BotonCrearUsuario>CREAR USUARIO</BotonCrearUsuario>
 
-            </div>
+            </ContenedorBotones>
 
 
 
@@ -70,7 +70,7 @@ const ContenedorParrafo = styled.div`
 margin-bottom:70px;
 `
 const ContenedorBotones = styled.div`
-
+margin-bottom:30px;
 `
 const BotonGoogle = styled.button`
 background-color:#E5E5E5;
