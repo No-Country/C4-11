@@ -1,6 +1,7 @@
 import "../UbicacionyContacto/UbicacionContacto.css"
 
 export const UbicacionContacto=()=>{
+    
     return(
         <div className="ubicacion-contacto-container">
             <div className="container">
