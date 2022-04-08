@@ -5,6 +5,8 @@ import Carrousel from './components/Carrousel/Carrousel';
 import About from './components/about/about';
 import Menu from './components/Menu/Menu';
 import Cervezas from './components/Dishes/Cervezas';
+import Picada from './components/Dishes/Picada';
+import Pizza from './components/Dishes/Pizza';
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
        <About />
        <Menu />
        <Cervezas />
+       <Picada />
+       <Pizza />
       <h1><FaBeer /> Beer Time - Landing Page <FaBeer /></h1>
       <h2>ASDASD</h2>
  

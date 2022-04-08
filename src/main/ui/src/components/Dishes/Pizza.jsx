@@ -1,67 +1,67 @@
 import React from 'react';
-import beer1 from "../../assets/img/beer.png";
-import beer2 from "../../assets/img/beer2.png";
-import beer3 from "../../assets/img/beer3.png";
-import beer4 from "../../assets/img/beer3.png";
+import Pizza1 from "../../assets/img/pizza_1.png";
+import Pizza2 from "../../assets/img/pizza_2.png";
+import Pizza3 from "../../assets/img/pizza_3.png";
+import Pizza4 from "../../assets/img/pizza_4.png";
 
-const Cervezas = () => {
+const Pizza = () => {
   return (
     <>
     <div className='title'>
-        <h2>Cervezas</h2>
+        <h2>Picadas</h2>
     </div>
     <div className='cards-dishes'>
       <div className="cards">
           <div className='image'>
-            <img src={beer1} className="card-img-top" alt="..."/>
+            <img src={Pizza1} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
 
     <div className="cards">
           <div className='image'>
-            <img src={beer2} className="card-img-top" alt="..."/>
+            <img src={Pizza2} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
 
     <div className="cards">
           <div className='image'>
-            <img src={beer3} className="card-img-top" alt="..."/>
+            <img src={Pizza3} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
 
     <div className="cards">
           <div className='image'>
-            <img src={beer4} className="card-img-top" alt="..."/>
+            <img src={Pizza4} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
 
     <div className="cards">
           <div className='image'>
-            <img src={beer2} className="card-img-top" alt="..."/>
+            <img src={Pizza1} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
 
     <div className="cards">
           <div className='image'>
-            <img src={beer1} className="card-img-top" alt="..."/>
+            <img src={Pizza2} className="card-img-top" alt="..."/>
           </div>
       <div className="card-body-dishes">
-        <p className="card-text">Cerveza Artesanal</p>
+        <p className="card-text">Pizza especial</p>
       </div>
     </div>
     
@@ -71,4 +71,4 @@ const Cervezas = () => {
   )
 }
 
-export default Cervezas
+export default Pizza
