@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import { IconContext } from 'react-icons/lib';
-
+import "../Login/Login.css"
 
 const Login = () => {
     const [correo, cambiarCorreo] = useState('')
@@ -28,7 +28,10 @@ const Login = () => {
             </ContenedorTitulo>
             <IconContext.Provider value={{ style: { fontSize: "2em", color: 'blue' } }}>
                 <form action="" onSubmit={handleSubmit}>
-                    <div>
+                    <div className='form-input'>
+                        <span>
+                            <p>Correo Electronico</p>
+                        </span>
                         <Input
                             type="email"
                             placeholder='correo@correo'
@@ -73,7 +76,7 @@ const Titulo = styled.h1`
 font-family: 'Roboto', sans-serif;
 `
 const Input = styled.input`
-background: #E5E5E5;
+background: black;
 height: 56px;
 width: 328px;
 left: 0px;
