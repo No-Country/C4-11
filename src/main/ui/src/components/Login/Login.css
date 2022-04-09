@@ -1,4 +1,92 @@
-.form-input{
+.title-login{
+    color:goldenrod;
+    margin-bottom: 20px;
+}
+.container-login{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+.caja-login{
+    width: 70%;
+    max-width: 400px;
+    flex-direction: column;
+    display: flex;
+} 
+.span-form{
+    width: 100px;
     display: flex;
     justify-content: center;
+    color:goldenrod;
+    background-color: black;
+    border: solid 1px goldenrod;
+    border-radius: 5px;
+    margin-right: 5px;
+    
+}
+.input-login{
+    
+    border-radius: 5px !important;
+}
+.button-enviar{
+    background-color: black;
+    border: solid 1px goldenrod;
+    color: goldenrod;
+    padding:5px 10px 5px 10px;
+    width: 30%;
+    margin: auto;
+    
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    
+
+}
+.button-enviar:hover{
+        transform: scale(1.1);
+        transition: 1s;
+        background-color: goldenrod;
+        color: black;
+}
+.a-login{
+    color:gray;
+    text-align:left;
+    margin-top: 30px;
+}
+.a-login:hover{
+    color: white;
+    text-decoration: none;
+
+}
+
+.botones-login{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.boton-google{
+    font-size:0.8rem;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px; 
+}
+.boton-google:hover{
+    transform: scale(0.95);
+}
+.boton-crear{
+    font-size:0.8rem;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-crear:hover{
+    transform: scale(0.95);
+}
+.cartel-error{
+    color:red;
+    display: block;
+    margin-top: -10px;
+    text-align: left;
+    margin-left: 10px;
 }

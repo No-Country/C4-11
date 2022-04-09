@@ -1,4 +1,6 @@
 import './App.css'
+import React from 'react';
+
  import {FaBeer} from 'react-icons/fa';
 import Login from './components/Login/Login';
 
