@@ -83,3 +83,11 @@
 .boton-crear:hover{
     transform: scale(0.95);
 }
+.cartel-error{
+    color:red;
+    display: block;
+    margin-top: -10px;
+    text-align: left;
+    margin-left: 10px;
+}
+
