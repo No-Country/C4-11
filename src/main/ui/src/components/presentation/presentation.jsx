@@ -11,21 +11,21 @@ export const Presentation=()=>{
 
     },
     {
-        id:"1",
+        id:"2",
         titulo:"Stout",
         rute:"https://i.postimg.cc/Rhk7VN6w/cerveza1.png",
         alcohol:"6%",
         description:'"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat aspernatur labore ex officiis laborum quos veniam dicta quisquam, reprehenderit iste maiores totam, deleniti odit? Eaque iste hic nisi odio quasi?"'
     },    
     {
-        id:"1",
+        id:"3",
         titulo:"Amber",
         rute:"https://i.postimg.cc/XqGKbwJV/cerveza3.png",
         alcohol:"6.5%",
         description:'"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat aspernatur labore ex officiis laborum quos veniam dicta quisquam, reprehenderit iste maiores totam, deleniti odit? Eaque iste hic nisi odio quasi?"'
     },
     {
-        id:"1",
+        id:"4",
         titulo:"Golden",
         rute:"https://i.postimg.cc/265FHpNL/cerveza6.png",
         alcohol:"5%",
@@ -41,7 +41,7 @@ return(
         <div className="row container-cevezas">
 
             {cervezas.map((e)=>
-                <div className="col-xl-3 carta-cerveza">
+                <div key={e.id} className="col-xl-3 carta-cerveza">
                     <h2 className="tittle-presentation">{e.titulo}</h2>
                     <img className="img-presentation" src={e.rute} alt="imagen cerveza" />
                     <p className="text-presentation">{e.description}</p>

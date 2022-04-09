@@ -24,7 +24,7 @@
 }
 .tittle-presentation{
     color: goldenrod;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 
 }
@@ -52,4 +52,8 @@
     color: goldenrod;
     font-size: 1.7rem;
     margin-left: 5px;
+}
+.invalid{
+    margin-bottom:  16px ;
+    margin-top: -10px;
 }
