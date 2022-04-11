@@ -7,6 +7,9 @@ import Menu from './components/Menu/Menu';
 import Cervezas from './components/Dishes/Cervezas';
 import Picada from './components/Dishes/Picada';
 import Pizza from './components/Dishes/Pizza';
+import Login from './components/Login/Login';
+
+
 
 function App() {
 
@@ -21,7 +24,8 @@ function App() {
        <Pizza />
       <h1><FaBeer /> Beer Time - Landing Page <FaBeer /></h1>
       <h2>ASDASD</h2>
- 
+      <Login />
+      <br/><br/><br/>
     </div>
   )
 }

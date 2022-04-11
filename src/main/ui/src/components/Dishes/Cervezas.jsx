@@ -4,6 +4,7 @@ import beer2 from "../../assets/img/beer2.png";
 import beer3 from "../../assets/img/beer3.png";
 import beer4 from "../../assets/img/beer3.png";
 
+
 const Cervezas = () => {
   return (
     <>

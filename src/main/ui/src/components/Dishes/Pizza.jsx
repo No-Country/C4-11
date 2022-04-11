@@ -8,7 +8,7 @@ const Pizza = () => {
   return (
     <>
     <div className='title'>
-        <h2>Picadas</h2>
+        <h2>Pizzas</h2>
     </div>
     <div className='cards-dishes'>
       <div className="cards">
@@ -66,7 +66,6 @@ const Pizza = () => {
     </div>
     
     </div>
-
   </>  
   )
 }

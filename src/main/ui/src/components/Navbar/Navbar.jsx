@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from "../../assets/img/logo.png";
 import "./style.css";
+import Login from "../Login/Login"
+
 
 const Navbar= () => {
   return (
@@ -27,7 +29,7 @@ const Navbar= () => {
           <a className="nav-link" href="#">UBICACIÓN</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">CONTACTO</a>
+        <a className="nav-link" href="#">Contacto</a>
         </li>
       </ul>
     

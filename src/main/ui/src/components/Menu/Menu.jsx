@@ -3,6 +3,7 @@ import Cerveza from "../../assets/img/menu1.png";
 import Picada from "../../assets/img/menu2.png";
 import Pizza from "../../assets/img/menu3.png";
 
+
 const Menu = () => {
   return (
       <>
