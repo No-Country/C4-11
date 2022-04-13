@@ -27,6 +27,11 @@ public class User {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
+    
+    @Column(nullable = false)
+    @Size(min = 4, message = "The password must be at least four characters.")
+    @NotEmpty(message = "The field must not be empty.")
+    private String name;
 
     @Column(nullable = false, unique = true)
     @Email(message = "Must be a properly formatted email address.")
