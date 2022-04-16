@@ -1,0 +1,32 @@
+{
+  "month": [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+  ],
+  "sessions":[
+    "Tarde",
+    "Prime",
+    "Media Noche"
+  ],
+  "zone": [
+    "A",
+    "B",
+    "C"
+  ],
+  "seat": [
+    1,
+    4,
+    8,
+    12
+  ]
+}
