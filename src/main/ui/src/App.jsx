@@ -1,5 +1,7 @@
 import './App.css'
- import {FaBeer} from 'react-icons/fa';
+import React from 'react';
+
+
 import Navbar from './components/Navbar/Navbar';
 import Carrousel from './components/Carrousel/Carrousel';
 import About from './components/about/about';
@@ -10,11 +12,11 @@ import Pizza from './components/Dishes/Pizza';
 
 
 import React, {useState} from "react";
-{/*import Reservation from "./components/Reservation/Reservation"
+
 import EstadoLog from './components/Login/EstadoLog';
 import Logout from "./components/Login/componentLogin/Logout";
-import firebaseApp from "../src/credenciales";
-import {getAuth, onAuthStateChanged} from "firebase/auth";
+
+
 import CardBeer from './components/Dishes/CardBeer';*/}
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -23,22 +25,11 @@ import Login from "./components/Login/Login";
 import Ubicacion from './components/Map/Ubicacion';
 
 
-
-{/*const auth = getAuth(firebaseApp);*/}
-
 function App() {
-  {/*const [userGlobal, setUserGlobal] = useState(null);
-
- onAuthStateChanged(auth, (userFirebase)=>{
-   if(userFirebase){
-        setUserGlobal(userFirebase);
-   }else{
-     //Si no hay sesión iniciada
-      setUserGlobal(null);
-   }
- })*/}
+ 
 
   return (
+
       <>
       <Router> 
        <Navbar/>   
@@ -54,11 +45,13 @@ function App() {
         </Routes>
       </Router>
 
-     {/*} <h1><FaBeer /> Beer Time - Landing Page <FaBeer /></h1>*/}
 <Login/>
   
     </>
   )  
+
 }
+
+
 
 export default App

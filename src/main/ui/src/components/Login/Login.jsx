@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import InputUser from '../../components/Login/componentLogin/InputUser';
 
-
 const Login = () => {
 
     const [password, cambiarPassword] = useState({campo: "", valido: null});
@@ -115,3 +114,4 @@ const Login = () => {
 }
 
 export default Login
+
