@@ -11,7 +11,7 @@ const About = () => {
             <p>Los invitamos a visitarnos, a conocer y disfrutar de una noche junto a sus amigos. </p>
         </div>
         <div className='picture'>
-            <img src={Beer3} className="d-block w-75" alt="..."/>       
+            <img src={Beer3}  alt="..."/>       
         </div>
     </div>
   )

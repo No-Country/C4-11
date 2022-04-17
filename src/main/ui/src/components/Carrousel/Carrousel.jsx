@@ -1,10 +1,13 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 import Beer1 from "../../assets/img/beer1.jpg";
 import Beer2 from "../../assets/img/beer2.jpg";
 import Beer3 from "../../assets/img/beer3.jpg";
 
 const Carrousel = () => {
   return (
+    <>
+    <Navbar/>
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
@@ -26,6 +29,7 @@ const Carrousel = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+  </>
   )
 }
 

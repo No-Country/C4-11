@@ -8,13 +8,8 @@ const colors = {
 }
 
 const Formulario = styled.form`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: block;
 
-    @media (max-width:800px) {
-       grid-template-columns: 1fr
-    }
 `;
 
 const Label = styled.label`
@@ -101,33 +96,28 @@ grid-column: span 2;
         grid-column: span 1;
     }
 `;
-
 const ButtonCentered = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     grid-column: span 2;
-
+    margin: auto;
+    
     @media (max-width: 800px){
         grid-column: span 1;
     }
 `;
 
 const Button = styled.button`
-    height: 45px;
-    line-height: 45px;
-    width: 30%;
     background-color: black;
-    color: #fff;
-    font-weight: bold;
-    border: none;
+    color: yellow;
+    font-size: 1rem;
+    padding: 5px 35px 5px 35px;
+    border: 1px solid yellow;
     border-radius: 3px;
     cursor: pointer;
-    transition: '0.1 ease all';
+    transition: 0.1s ease-in;
 
     &:hover{
-        box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
-    }
+         color: #d3d300;
+        }
 `;
 
 const Success = styled.p`

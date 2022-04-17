@@ -100,8 +100,8 @@ button:hover{
         box-shadow: 3px 0px 30px rgba(38, 45, 51, 0.2);
     }
 .mensajeExito{
-    font-size: 23px;
-    color: rgb(11, 184, 19);
+    font-size: 1rem;
+    color: green;
     display: none;
 }
 .mensajeError{

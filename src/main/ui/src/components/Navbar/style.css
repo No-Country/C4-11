@@ -1,140 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
-.navbar{
+body{
     background-color: black;
+}
+.nav-menu{
     z-index: 10;
+    border: 1px solid yellow ;
+    margin: 5px;
+    background-color: black;
 }
 .nav-link{
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 1.3rem;
-    color: white;
+    color: white !important;
+}
+.nav-link:hover{
+    color: none !important;
 }
 .navbar-brand{
-    width: 65%;
-    margin-left: -60px;
+    width: 40%;
 }
 .carousel{
-    background-color: black;
-    height: 100% !important;
-    margin-top: -120px;
+    position: absolute;
+    top: 0px !important;
+    width: 100%;
 }
 .carousel-item img{
     margin: auto;
     width: 30% !important;
     height: 100vh;
+
 }
 .container-about{
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100% !important;
 
+    flex-wrap: wrap;
+    width: 100%;
 }
-.content{
-    width: 50%;
+.picture{
+    width: 40%;
+    height: 20% !important;
+    object-fit: contain;
 }
 .content h1{
     font-family: 'Roboto', sans-serif;
     color: gold;
 }
+.content{
+    width: 50%;
+    margin-left: 20px;
+}
 .content p{
-    text-align: left;
     margin-top: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
-.picture{
-    display: flex;
-    justify-content: center;
-}
-@media only screen and (max-width: 1440px){
-    .cards-dishes .card-text{
-        margin-left: 300px !important
-    }
-}
-@media only screen and (max-width: 1280px){
-    .cards-dishes .card-text{
-        margin-left: 200px !important
-    }
-}
-@media only screen and (max-width: 1200px) {
-    .carousel-item img{
-        height: 700px !important;
-        object-fit: cover;
-        width: 50% !important;
-    
-    }
-    .content p{
-        font-size: 1.2rem;
-    }
-    .content{
-        width: 70%;
-    }
-    .cards-dishes{
-        width: 80% !important;
-    }
-    .cards .image img{
-        width: 50%;
-    }
-    .cards-dishes .card-text{
-        font-size: 1rem !important;
-    }
-    .card-body-dishes{
-        width: 60vw !important;
-        position: absolute !important;
-    
-    }
-    .cards-dishes .card-text{
-        margin-top: 35px !important;
-        margin-left: 200px !important;
-        font-size: 1.3rem !important;
-        
-    }
- 
-  }
-@media only screen and (max-width: 750px){
-    .cards-dishes .card-text{
-        margin-top: 35px !important;
-        margin-left: 150px;
-        font-size: 1.1rem !important;
-    }
-    .card{
-        width: 500px !important;
-    }
-}
-
 
 .title h1{
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     padding-bottom: 10px;
     padding-top: 20px;
     color: gold;
     text-align: start;
     text-align: center;
 }
-.cards{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;  
+.title h2{
+    margin: 50px 0 50px 0;
+    text-align: center;
+    color: yellow;
 }
+.cards{
+
+    justify-content: space-evenly;
+    flex-wrap: wrap ;  
+}
+.card-food{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card{
-  
-    border-radius: 20px;
-    border: none;
+    width: 250px !important;
+
+    border-radius: 20px !important; 
     transition: all 0.75s; 
     margin-top: 15px;
+    border: none !important;
 }
 .card img{
     border-radius: 20px;
+
 }
 .card:hover{
-    box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
+    /*box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
     -webkit-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
     -moz-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
-    transform: translateY(-10px);
+    */transform: translateY(-3px);
 }
 .card-body{
     position: absolute;   
@@ -145,6 +108,7 @@
     border-radius: 0 0 20px 20px;
     width: 100%;
     transition: 1s;
+
 }
 .card-body:hover{
     background-color: black;
@@ -152,12 +116,51 @@
 .card-body a{
     text-decoration: none;
     color: white;
+    text-align: center ;
+}
+.card-body a:hover{
+    color: white;
 }
 
-@media only screen and (max-width: 600px) {
-    .card{
-        width: 350px !important;
+
+@media only screen and (max-width: 1200px) {
+    .carousel-item img{
+        height: 700px !important;
+        object-fit: cover;
+        width: 50% !important;     
     }
+
+    .cards-dishes .card-text{
+        font-size: 1.1rem !important;
+    }
+    .cards-dishes{
+        width: 80% !important;
+    }
+    .content p{
+        font-size: 1.2rem;
+    }
+    .content{
+        width: 70%;
+    }
+  }
+@media only screen and (max-width: 900px){ 
+    .card-food img{
+        width: 80%;
+    }
+} 
+@media only screen and (max-width: 750px){
+    .cards-dishes .card-text{
+        font-size: 1.1rem !important;
+    }
+    .card-food img{
+        width: 80% ;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
     .carousel-item img{
         height: 450px !important;
         object-fit: cover;
@@ -174,73 +177,46 @@
     }
     .title h1{
         font-size: 2rem;
+
     }
-    .cards-dishes .card-text{
-        margin-left: 150px !important; 
-        font-size: 1.2rem !important;
+    .card-food img{
+        width: 70%;
     }
   }
-/*///////CERVEZAS////////*/
+/*///////DISHES////////*/
 
 .cards-dishes{
-    margin-bottom: 50px;
-    align-items: center;
-    width: 80vw;
-    display: inline-block;
-    justify-content: center;
-}
-.cards-dishes .cards{
+    background-color: white;
+    width: 70%;
     display: flex;
-    justify-content: start;
-    background-color: rgb(206, 206, 206);
-    margin: 50px 20px -30px 20px;
-    box-shadow: -1px 9px 14px -8px rgba(0,0,0,0.77);
-    -webkit-box-shadow: -1px 9px 14px -8px rgba(0,0,0,0.77);
-    -moz-box-shadow: -1px 9px 14px -8px rgba(0,0,0,0.77);
+    margin: 10px auto;
 }
 .card-body-dishes{
-    width: 60vw;
-    position: absolute;
-
-}
-.cards-dishes .card-text{
-    margin-top: 75px;
-    font-weight: 400;
-    font-size: 1.8rem;
-    margin-left: 500px;
+    margin: auto;
 }
 
-.cards .image img{
-    margin: 10px;
-    border-radius: 50%;
-    position: relative;
 
-}
 @media only screen and (max-width: 500px){
     .card{
-        width: 300px !important;
+        width: 350px !important;
     }
+
     .cards-dishes .card-text{
-        font-size: 0.8rem !important;
-        margin-left: 120px !important;
-        margin-top: 30px !important;
+        font-size: 1rem !important;
     }
-    .cards .image img{
+    .card-food .image img{
         width: 60%;
-        margin-left: -30px;
     }
 }
 @media only screen and (max-width: 360px){
+    .card{
+        width: 250px !important;
+    }
     .cards-dishes .card-text{
         font-size: 0.7rem !important;
-        margin-left: 70px !important;
-        margin-top: 30px !important;
     }
-    .cards .image img{
-        width: 40%;
-        margin-left: -30px;
-    }
-    .card{
-        width: 260px !important;
-    }
+    .card-food .image img{
+        width: 50%;
+ }
+
 }

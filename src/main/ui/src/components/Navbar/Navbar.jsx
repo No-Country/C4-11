@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from "../../assets/img/logo.png";
 import "./style.css";
-import Login from "../Login/Login"
+import { Link } from 'react-router-dom';
 
 
 const Navbar= () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <>
+    <nav className="navbar nav-menu navbar-expand-lg navbar-dark">
   <div className="container-fluid">
     <a href="/"> 
       <img className="navbar-brand" src={logo} alt="..." />
@@ -17,25 +18,32 @@ const Navbar= () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{marginRight:"60px"}}>
         <li className="nav-item">
-          <a className="nav-link" href="#">QUIÉNES SOMOS</a>
+          <Link className="nav-link" to={"/Home"}>HOME</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">MENÚ</a>
+          <Link className="nav-link" to={"/About"}>QUIÉNES SOMOS</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">RESERVA</a>
+        <Link className="nav-link" to={"/menu"}>MENÚ</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">UBICACIÓN</a>
+          <Link className="nav-link" to={"/Ubicacion"}>UBICACIÓN</Link>
         </li>
         <li className="nav-item">
-        <a className="nav-link" href="#">Contacto</a>
+        <Link className="nav-link" to={"/"}>RESERVA</Link>
+        </li>
+        <li className="nav-item">
+        <Link className="nav-link" to={"/"}>UBICACIÓN</Link>
+        </li>
+        <li className="nav-item">
+        <Link className="nav-link" to={"/"}>CONTACTO</Link>
         </li>
       </ul>
     
     </div>
   </div>
 </nav>
+</>
   )
 }
 

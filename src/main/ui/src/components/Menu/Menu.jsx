@@ -2,7 +2,7 @@ import React from 'react';
 import Cerveza from "../../assets/img/menu1.png";
 import Picada from "../../assets/img/menu2.png";
 import Pizza from "../../assets/img/menu3.png";
-
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
@@ -14,19 +14,19 @@ const Menu = () => {
         <div className="card" style={{width: "35rem"}}>
             <img src={Cerveza} className="card-img-top" alt="..."/>
             <div className="card-body">
-            <a href="/cervezas"><p className="card-text">Cervezas</p></a>
+            <Link to={"/cervezas"}><p className="card-text">Cervezas</p></Link>
             </div>
         </div>
         <div className="card" style={{width: "35rem"}}>
             <img src={Picada} className="card-img-top" alt="..."/>
             <div className="card-body">
-            <a href="#"><p className="card-text">Picadas</p></a>
+            <Link to={"/Picada"}><p className="card-text">Picadas</p></Link>
             </div>
         </div>
         <div className="card" style={{width: "35rem"}}>
             <img src={Pizza} className="card-img-top" alt="..."/>
             <div className="card-body">
-            <a href="#"><p className="card-text">Pizzas</p></a>
+            <Link to={"/Pizza"}><p className="card-text">Pizzas</p></Link>
             </div>
         </div>
     </div>

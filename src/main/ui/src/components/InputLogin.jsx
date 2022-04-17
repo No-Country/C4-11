@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 
 const InputLogin= ({label, placeholder, type, error, expresionRegular, name, estado, cambiarEstado}) => {
   const onChange = (e) => {
