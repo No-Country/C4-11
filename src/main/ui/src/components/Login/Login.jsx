@@ -1,92 +1,117 @@
-import React, { useState } from 'react';
-import { FcGoogle } from "react-icons/fc";
-import './Login.css';
-
+import React, {useState} from 'react';
+import "./styleLogin.css";
+import { Formulario, ButtonCentered, Button, ErrorDiv } from './helper/Form';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
+import InputUser from '../../components/Login/componentLogin/InputUser';
 
 const Login = () => {
 
-    const [correo, setCorreo] = useState('');
-    const [password, setPasword] = useState('');
-    const [mostrarCartelEmail, setMostrarCartelEmail] = useState('none');
-    const [mostrarCartelPassword, setMostrarCartelPassword] = useState('none');
+    const [password, cambiarPassword] = useState({campo: "", valido: null});
+
+    const [password2, cambiarPassword2] = useState({campo: "", valido: null});
+
+    const [correo, cambiarCorreo] = useState({campo: "", valido: null});
+
+    const [formularioValido, cambiarFormulario] = useState(null);
 
     const expresiones = {
-        usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-        password: /^.{4,12}$/, // 4 a 12 digitos.
-        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guionbajo
+        nombre: /^[a-zA-ZÀ-ÿ\s]{5,16}$/, // Letras y espacios, pueden llevar acentos.
+        password: /^.{8,16}$/, // 8 a 16 digitos.
+        correo: /^[a-zA-Z0-9.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
         telefono: /^\d{7,14}$/ // 7 a 14 numeros.
     }
 
-    //validar input correo
-    const validateInput = () => {
-        if (expresiones.correo.test(correo) || correo.length === 0) {
-            setMostrarCartelEmail('none')
-        } else {
-            setMostrarCartelEmail('block')
-            setCorreo('')
+    const validarPassword = () =>{
+        if(password.campo.length > 0){
+            if(password.campo !== password2.campo){
+                cambiarPassword2((prevState) => {
+                    return{...prevState, valido: 'false'}
+                })
+            }else{
+                cambiarPassword2((prevState) => {
+                    return {...prevState, valido: 'true'}
+                });
+            }
         }
     }
-    //Validar input password
-    const validateInputPassword = () => {
-        if (expresiones.password.test(password) || password.length === 0) {
-            setMostrarCartelPassword('none')
-        } else {
-            setMostrarCartelPassword('block')
-            setPasword('')
-        }
-    }
-    const Login = (e) => {
+
+    const onSubmit = (e) => {
         e.preventDefault();
-        if (password.length > 0 && correo.length > 0) {
-            console.log("enviamos estos datos" + correo + password)
+
+        if(
+            password.valido === 'true' && 
+            password2.valido === 'true' && 
+            correo.valido === 'true' && 
+            {/*terminos*/})
+            {
+            cambiarFormulario(true)
+            cambiarCorreo({cambio: '', valido: 'null'});
+            cambiarPassword({cambio: '', valido: null});
+            cambiarPassword2({cambio: '', valido: null});
+            window.location.href="./Reservas"
+            //
         }
-        else {
-            alert("llenar correctamente los campos")
+        else{
+            cambiarFormulario(false)
         }
-    }
-    return (
-        <div className='container-login'>
-            <div className='container caja-login'>
-                <h1 className='title-login'>Login</h1>
-                <form onSubmit={Login} >
-                    <div className="input-group mb-3">
-                        <span className="input-group-text  span-form" id="basic-addon1">Email</span>
-                        <input
-                            type="text"
-                            className="form-control input-login"
-                            placeholder="Escribe aqui"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1"
-                            id="correo"
-                            onChange={e => setCorreo(e.target.value)}
-                            onBlur={validateInput}                          
-                        />
-                    </div>
-                    <p className='cartel-error ' style={{ display: mostrarCartelEmail }}>Formato de Email Inválido </p>
-                    <div className="input-group mb-3">
-                        <span className="input-group-text span-form" id="basic-addon1">Password</span>
-                        <input
-                            type="password"
-                            className="form-control  input-login"
-                            placeholder="Escribe aqui"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1"
-                            id="password"
-                            onChange={e => setPasword(e.target.value)}
-                            onBlur={validateInputPassword}                            
-                        />
-                    </div>
-                    <p className='cartel-error ' style={{ display: mostrarCartelPassword }}>Formato de Password Inválido. Ingrese mas de 3 carácteres</p>
-                    <button className='button-enviar' type='submit' >Enviar</button>
-                </form>
-                <a href="#" className='a-login '>Es la primera vez que ingresas?</a>
-                <div className='botones-login'>
-                    <button className='boton-google' ><span><FcGoogle /></span>  CONTINUAR CON GOOGLE</button>
-                    <button className='boton-crear'>CREAR USUARIO</button>
-                </div>
-            </div>
-        </div>
-    );
+    };
+  return (
+    <main> 
+        <h1>{formularioValido ? "LOG IN" : "SIGN UP"}</h1>
+        <Formulario action='' onSubmit={onSubmit}>
+         
+            <InputUser
+                estado={correo}
+                cambiarEstado={cambiarCorreo}
+                type="email"
+                label="Email"
+                placeholder="Ingrese su correo electrónico"
+                name="email"
+                error="Carácteres inválidos"
+                expresionRegular={expresiones.correo}
+            />
+            
+            <InputUser
+                estado={password}
+                cambiarEstado={cambiarPassword}
+                type="password"
+                label="Contraseña"
+                placeholder="Ingrese su correo contraseña"
+                name="password"
+                error="La contraseña debe contener de 8 a 16 digitos."
+                expresionRegular={expresiones.password}
+            />
+
+            <InputUser
+                estado={password2}
+                cambiarEstado={cambiarPassword2}
+                type="password"
+                label="Repita su contraseña"
+                placeholder="Repita su contraseña"
+                name="password2"
+                error="Las contraseñas no coinciden"
+                funcion={validarPassword}
+            />
+
+            <ButtonCentered>
+                <Button type='submit'> {formularioValido ? "ENVIAR" : "CREAR USUARIO"}</Button>
+                <br></br>
+            </ButtonCentered>
+        </Formulario>
+        <Button variant="secondary" onClick={()=>cambiarFormulario(!formularioValido)}>
+            {formularioValido ? "REGISTRATE"  : "LOG IN"}
+            </Button>
+            {formularioValido === false && <ErrorDiv>
+                <p>
+                    <FontAwesomeIcon icon={faExclamationTriangle}/>
+                <b>Error: </b> Complete el formulario correctamente.
+                </p>
+            </ErrorDiv>}
+    </main>
+  )
 }
-export default Login;
+
+export default Login
+
