@@ -66,32 +66,18 @@ body{
     text-align: start;
     text-align: center;
 }
-.title h2{
-    margin: 50px 0 50px 0;
-    text-align: center;
-    color: yellow;
-}
-.cards{
-
-    justify-content: space-evenly;
-    flex-wrap: wrap ;  
-}
-.card-food{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .card{
-    width: 250px !important;
-
-    border-radius: 20px !important; 
+    width: 350px;
+    height: 220px;
+    border-radius: 20px ; 
     transition: all 0.75s; 
-    margin-top: 15px;
+    margin: 15px;
     border: none !important;
 }
 .card img{
     border-radius: 20px;
-
+    height: 220px;
 }
 .card:hover{
     /*box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
@@ -104,38 +90,96 @@ body{
     bottom: 0;  
     font-family: 'Roboto', sans-serif !important;
     font-size: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255);
     border-radius: 0 0 20px 20px;
     width: 100%;
+    height: 60px;
     transition: 1s;
+    display: flex;
+    justify-content: space-between;
 
 }
 .card-body:hover{
     background-color: black;
 }
+
+.description-dish p{
+    font-size: 1.2rem;
+    color: black;
+}
 .card-body a{
+    font-size: 1.2rem;
     text-decoration: none;
-    color: white;
-    text-align: center ;
+    font-weight: 600;
+    color: black;
 }
-.card-body a:hover{
+
+.cards-dishes{
+    position: relative;
+    top: -720px;
+    left: 400px;
+    margin: 0px 10px 10px 0;
+    background-color: white;
+    width: 35%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.card-body-dishes{
+    margin: auto;
+}
+.title-dishes{
+   display: flex;
+   justify-content: space-around;
+   visibility: hidden;
+}
+.title-dishes a{
     color: white;
+    text-decoration: none !important;
+    font-size: 1.5rem;
 }
 
 
+@media only screen and (max-width: 1400px){
+    .cards-dishes{
+        left: 390px;
+        width: 34%;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .cards-dishes{
+        width: 33%;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .carousel-item img{
         height: 700px !important;
         object-fit: cover;
         width: 50% !important;     
     }
+    .card{
+        width: 100%;
+    }
+    .card-body a{
+        font-size: 1.2rem;
+    }
+    .description-dish{
+        font-size: 1rem;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
 
+    }
     .cards-dishes .card-text{
-        font-size: 1.1rem !important;
+        font-size: 1.5rem;
     }
-    .cards-dishes{
-        width: 80% !important;
+    .cards-dishes{  
+        top: 50px;
+        width: 80%;
+        left: 100px;
     }
+   
     .content p{
         font-size: 1.2rem;
     }
@@ -143,23 +187,57 @@ body{
         width: 70%;
     }
   }
-@media only screen and (max-width: 900px){ 
-    .card-food img{
-        width: 80%;
+
+@media only screen and (max-width: 1100px){ 
+    .cards-dishes{
+        left: 80px;
     }
+    .cards{ 
+        display: block;
+        justify-content: center;
+        
+    }
+    .card{
+        margin-bottom: 10px;
+        width: 90%;
+        height: 250px;
+        margin: auto auto 10px;
+    }
+    .card img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .card-body a{
+        font-size: 1.5rem;
+    }
+    .description-dish{
+        font-size: 1.5rem;
+    }
+
 } 
+@media only screen and (max-width: 900px) {
+    .title-dishes{
+        visibility: visible;
+        margin-top: 50px;
+     }
+     .card{
+         display: none;
+     }
+     .title h1{
+         display: none;
+     }
+}
 @media only screen and (max-width: 750px){
-    .cards-dishes .card-text{
-        font-size: 1.1rem !important;
+    .cards-dishes{
+        left: 78px;
     }
     .card-food img{
         width: 80% ;
     }
-
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
 
     .carousel-item img{
         height: 450px !important;
@@ -177,46 +255,32 @@ body{
     }
     .title h1{
         font-size: 2rem;
-
     }
-    .card-food img{
-        width: 70%;
+    .cards-dishes{
+        left: 60px;
     }
   }
-/*///////DISHES////////*/
-
-.cards-dishes{
-    background-color: white;
-    width: 70%;
-    display: flex;
-    margin: 10px auto;
-}
-.card-body-dishes{
-    margin: auto;
-}
-
 
 @media only screen and (max-width: 500px){
-    .card{
-        width: 350px !important;
-    }
 
     .cards-dishes .card-text{
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
-    .card-food .image img{
-        width: 60%;
+    .cards-dishes{
+        left: 52px;
     }
+
 }
-@media only screen and (max-width: 360px){
-    .card{
-        width: 250px !important;
-    }
+@media only screen and (max-width: 380px){
     .cards-dishes .card-text{
-        font-size: 0.7rem !important;
+        font-size: 1.1rem !important;
+        margin-left: -65px !important;
+    }
+    .cards-dishes{
+        left: 35px;
     }
     .card-food .image img{
-        width: 50%;
+        width: 55%;
  }
 
 }

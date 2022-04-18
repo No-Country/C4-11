@@ -6,9 +6,7 @@ import CardPicada from './CardPicada';
 const Picada = () => {
   return (
     <><Menu/>
-        <div className='title'>
-          <h2>PICADAS</h2>
-        </div>
+
     {
       dataPicada.map(({src, description}, index)=>(
         <CardPicada
