@@ -23,7 +23,7 @@ const Login = () => {
         telefono: /^\d{7,14}$/ // 7 a 14 numeros.
     }
 
-    const validarPassword = () =>{
+    const validarPassword = () => {
         if(password.campo.length > 0){
             if(password.campo !== password2.campo){
                 cambiarPassword2((prevState) => {
@@ -44,7 +44,7 @@ const Login = () => {
             password.valido === 'true' && 
             password2.valido === 'true' && 
             correo.valido === 'true' && 
-            {/*terminos*/})
+            {/**/})
             {
             cambiarFormulario(true)
             cambiarCorreo({cambio: '', valido: 'null'});
@@ -62,12 +62,16 @@ const Login = () => {
         <h1>{formularioValido ? "LOG IN" : "SIGN UP"}</h1>
         <Formulario action='' onSubmit={onSubmit}>
          
+    
+               
             <InputUser
+                label="Email"
+                placeholder="Ingrese su correo electrónico"
+         
                 estado={correo}
                 cambiarEstado={cambiarCorreo}
                 type="email"
-                label="Email"
-                placeholder="Ingrese su correo electrónico"
+               
                 name="email"
                 error="Carácteres inválidos"
                 expresionRegular={expresiones.correo}

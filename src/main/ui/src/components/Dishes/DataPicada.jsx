@@ -20,6 +20,22 @@ const dataPicada = [
         src: Picada4,
         description: "Especial para 4 Personas"
     },
+    {
+        src: Picada1,
+        description: "Especial para 4 Personas"
+    },
+    {
+        src: Picada2,
+        description: "Especial para 4 Personas"
+    },
+    {
+        src: Picada3,
+        description: "Especial para 4 Personas"
+    },
+    {
+        src: Picada4,
+        description: "Especial para 4 Personas"
+    },
 
 
 

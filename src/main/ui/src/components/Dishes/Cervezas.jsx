@@ -7,9 +7,6 @@ const Cervezas = () => {
   return (
     <>
     <Menu/>
-        <div className='title'>
-          <h2>CERVEZAS</h2>
-        </div>
     {
       dataBeer.map(({src, description}, index)=>(
         <CardBeer

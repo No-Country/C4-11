@@ -70,13 +70,8 @@ label{
     font-size: 16px;
     display: none;
 }
-.terminosClass{
-    grid-column: span 2;
-    
-}
-.terminosClass input{
-    margin-right: 10px;
-}
+
+
 .botonCentrado{
     display: flex;
     flex-direction: column;

@@ -31,11 +31,12 @@ const GroupInput = styled.div`
 `;
 
 const Input = styled.input`
+   
     width: 100%;
     background-color: white;
-    border-radius:45px;
-    height: 45px;
-    line-height: 45px;
+    border-radius: 5px;
+    /*height: 45px;
+    line-height: 45px;*/
     padding: 0 40px 0 10px;
     transition: 0.3 ease all;
     border: 3px solid transparent;
@@ -43,7 +44,7 @@ const Input = styled.input`
     &:focus{
         border: 3px solid ${colors.border};
         outline: none;
-        box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+        box-shadow: 3px 0px 30px rgba(134, 134, 134, 0.4);
     
     }
     ${props => props.valido === 'true' && css`
@@ -87,15 +88,7 @@ const IconVal = styled(FontAwesomeIcon)`
         color: ${colors.success};
     `}
 `;
-const Terminos = styled.div`
-grid-column: span 2;
-    input{
-        margin-left: 10px;
-    }
-    @media (max-width: 800px){
-        grid-column: span 1;
-    }
-`;
+
 const ButtonCentered = styled.div`
     grid-column: span 2;
     margin: auto;
@@ -136,4 +129,4 @@ const ErrorDiv = styled.div`
         margin-left: 10px;
     }
 `;
-export {Formulario, Label, GroupInput, Input, IconVal, ErrorMessage, Terminos, ButtonCentered, Button, Success, ErrorDiv}
+export {Formulario,  Label, GroupInput, Input, IconVal, ErrorMessage, ButtonCentered, Button, Success, ErrorDiv}

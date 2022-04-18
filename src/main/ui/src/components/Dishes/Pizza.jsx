@@ -7,9 +7,8 @@ const Pizza = () => {
   return (
     <>
     <Menu/>
-        <div className='title'>
-          <h2>PIZZAS</h2>
-        </div>
+
+     
     {
       dataPizza.map(({src, description}, index)=>(
         <CardPizza

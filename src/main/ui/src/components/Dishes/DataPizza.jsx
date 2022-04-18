@@ -20,6 +20,22 @@ const dataPizza = [
         src: Pizza4,
         description: "Pizza Especial"
     },
+    {
+        src: Pizza1,
+        description: "Pizza Especial"
+    },
+    {
+        src: Pizza2,
+        description: "Pizza Especial"
+    },
+    {
+        src: Pizza3,
+        description: "Pizza Especial"
+    },
+    {
+        src: Pizza4,
+        description: "Pizza Especial"
+    },
 
 
 

@@ -20,6 +20,22 @@ const dataBeer = [
         src: beer4,
         description: "Cerveza Artesanal"
     },
+    {
+        src: beer1,
+        description: "Cerveza Artesanal"
+    },
+    {
+        src: beer2,
+        description: "Cerveza Artesanal"
+    },
+    {
+        src: beer3,
+        description: "Cerveza Artesanal"
+    },
+    {
+        src: beer4,
+        description: "Cerveza Artesanal"
+    },
 
 
 
