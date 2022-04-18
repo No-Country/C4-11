@@ -13,20 +13,19 @@
     "Noviembre",
     "Diciembre"
   ],
-  "sessions":[
+  "sessions": [
     "Tarde",
     "Prime",
-    "Media Noche"
+    "Madrugada"
   ],
-  "zone": [
+  "zones": [
     "A",
     "B",
     "C"
   ],
-  "seat": [
-    1,
-    4,
-    8,
-    12
+  "seats": [
+    [4, 4, 6, 2, 2],
+    [2, 2, 4, 2, 4, 4],
+    [6, 6, 6]
   ]
 }
