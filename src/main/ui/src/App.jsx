@@ -9,6 +9,7 @@ import Cervezas from './components/Dishes/Cervezas';
 import Picada from './components/Dishes/Picada';
 import Pizza from './components/Dishes/Pizza';
 import Login from "./components/Login/Login";
+import Reservation from "./components/Reservation/Reservation"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/Picada" element={<Picada />} />
           <Route exact path="/Pizza" element={<Pizza />} />
           <Route exact path="/Cervezas" element={<Cervezas />} />
+          <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
         </Routes>
       </Router>
     </>

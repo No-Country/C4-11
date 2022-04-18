@@ -1,6 +1,7 @@
 // ! Al llamar al componente lleva como prop el "Date()" actual
 // ? {/* <Reservation date={new Date()} /> */}
-import { useReducer } from "react"
+
+import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
 import { month, sessions, zones } from "../../static.json"
@@ -20,9 +21,10 @@ export default function Reservation({ date }) {
     dispatch({ type: "SET_ZONE", payload: e.target.value })
   }
 
-  const showReserva = () =>{ console.log("estamos en la reserva")}
+  const showReserva = () => { console.log("estamos en la reserva") };
+
   return (
-    <div>
+    <div style={{ color: "white" }}>
       <div className="seats">
         <label htmlFor="seats">Asientos </label>
         <input id="seats" type="text" placeholder={bookingDay.seats}
@@ -64,7 +66,7 @@ export default function Reservation({ date }) {
           bookingDay.tables &&
           bookingDay.tables.map((table, i) => table &&
             (<button key={i}
-              onClick={ ()=>dispatch({type: "SET_CHOICE", payload: i})}
+              onClick={() => dispatch({ type: "SET_CHOICE", payload: i })}
             >{i}</button>)
           )
         }
