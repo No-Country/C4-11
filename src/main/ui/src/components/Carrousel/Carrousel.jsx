@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import Beer1 from "../../assets/img/beer1.jpg";
 import Beer2 from "../../assets/img/beer2.jpg";
 import Beer3 from "../../assets/img/beer3.jpg";
-
+import {Map} from "../Map/Map"
 const Carrousel = () => {
   return (
     <>
@@ -29,6 +29,7 @@ const Carrousel = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+<Map></Map>
   </>
   )
 }

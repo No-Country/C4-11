@@ -13,6 +13,7 @@ import React from "react";
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Login from "./components/Login/Login";
+import { Footer } from './components/Footer/Footer';
 
 
 
@@ -33,10 +34,13 @@ function App() {
           <Route exact path="/Picada" element={<Picada/>}/>
           <Route exact path="/Pizza" element={<Pizza/>}/>
           <Route exact path="/Cervezas" element={<Cervezas/>}/>
+          
       
           
         </Routes>
+        <Footer />
       </Router>
+      
 
     </>
   )  

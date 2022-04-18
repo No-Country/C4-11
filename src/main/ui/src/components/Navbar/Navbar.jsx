@@ -33,7 +33,7 @@ const Navbar= () => {
         <Link className="nav-link" to={"/"}>RESERVA</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link" to={"/"}>UBICACIÓN</Link>
+        <a className="nav-link" href='#Map'>UBICACIÓN</a>
         </li>
         <li className="nav-item">
         <Link className="nav-link" to={"/"}>CONTACTO</Link>
