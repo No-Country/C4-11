@@ -1,9 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300&display=swap');
 .map{
     height: 100%;
     width: 90%;
     border-radius: 20px;
  
+}
+.texto-map{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 .ubicacion-contacto-container{
     background-color: rgb(0, 0, 0);
@@ -13,9 +18,13 @@
 .titulo-contacto{
     color: goldenrod;
     margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 .texto-contact{
-    color:white
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 .input-group-text{
     background-color: black;

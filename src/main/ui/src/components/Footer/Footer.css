@@ -1,58 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300&display=swap');
 .footer{
     background-color: black;
-    padding: 30px;
+    height: 100px;
     border-top: 1px solid rgba(128, 128, 128, 0.71);
 }
-.contenedor-footer{
-    justify-content: flex-end;
-    align-items: center;
-}
-.texto-footer{
-    color: white;
-    position: relative;
-    font-weight: 600;
-    width: 100%;
-   
-}
 .footer-container{
-    display: flex;
-    justify-content: space-around;
+    display:flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+.texto-footer p{
+    color: white ;
+    margin: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 .icono-redes{
-   margin-left: 30px;
-   
+   margin: 35px 60px 0 0;
 }
 .icono-redes:hover{
     transform: scale(1.1);
     transition: 0.8s;
 }
-.cajon-redes{
-    margin-right: 150px;
-}
-@media only screen and (max-width: 1000px){
-    .texto-footer{
-        position: relative;
-        left: 100px;
+
+@media only screen and (max-width: 530px){
+    .footer-container{
+        text-align: center;
+        display: block;
+        justify-content: center;
     }
-    .cajon-redes{
-        position: relative;
-        display: flex;
-      
+    .texto-footer p{
+        margin: 10px 0 0 0 ;
     }
-}
-@media only screen and (max-width: 770px){
-    .cajon-redes{
-        position: relative;
-        left: 150px;
-    }
-}
-@media only screen and (max-width: 550px){
-    .cajon-redes{
-    position: relative;
-       width: 100%;
-       right: 50px;
-    }
-    .texto-footer{
-        left: 10px;
+    .icono-redes{
+        margin: 20px 25px 0px 10px;
     }
 }
