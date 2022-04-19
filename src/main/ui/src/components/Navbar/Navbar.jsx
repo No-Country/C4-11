@@ -27,9 +27,6 @@ const Navbar= () => {
         <Link className="nav-link" to={"/menu"}>MENÚ</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to={"/Ubicacion"}>UBICACIÓN</Link>
-        </li>
-        <li className="nav-item">
         <Link className="nav-link" to={"/"}>RESERVA</Link>
         </li>
         <li className="nav-item">

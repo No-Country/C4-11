@@ -10,7 +10,7 @@ const About = () => {
             <p>Desde 30 de febrero de 2019 abrió sus puertas al público.</p>
             <p>Los invitamos a visitarnos, a conocer y disfrutar de una noche junto a sus amigos. </p>
         </div>
-        <div className='picture'>
+        <div className='picture-about'>
             <img src={Beer3}  alt="..."/>       
         </div>
     </div>

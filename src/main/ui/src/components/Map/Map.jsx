@@ -68,7 +68,7 @@ export const Map=()=>{
                         <p className="texto-contact">WhatsApp: 3415960296</p>
                         <p className="texto-contact">Email: beertime@gmail.com</p>
                         </div>
-                    <div className="row-6">
+                    <div className="row-6 container-consulta">
                         <h3 className="titulo-contacto">Envianos tu consulta</h3>  
                     <form  className="container-inputs" >     
         <div className="input-group mb-3">

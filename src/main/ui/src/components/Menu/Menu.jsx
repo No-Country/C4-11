@@ -2,9 +2,12 @@ import React from 'react';
 import Cerveza from "../../assets/img/menu1.png";
 import Picada from "../../assets/img/menu2.png";
 import Pizza from "../../assets/img/menu3.png";
-import { Link } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 
+const activeLink = ({isActive}) => (isActive ? "active" : "");
+    
 const Menu = () => {
+   
   return (
       <>
         <div className='title'>
@@ -35,9 +38,9 @@ const Menu = () => {
             </div>
         </div>
         <div className='title-dishes'>
-        <Link to={"/Cervezas"}><p>CERVEZAS</p></Link>    
-        <Link to={"/Pizza"}><p>PIZZAS</p></Link> 
-        <Link to={"/Picada"}><p>PICADAS</p></Link> 
+        <NavLink to="/Cervezas" className={activeLink} style={{paddingRight:"50px"}}><p>CERVEZAS</p></NavLink>    
+        <NavLink to="/Pizza" className={activeLink}><p>PIZZAS</p></NavLink> 
+        <NavLink to="/Picada" className={activeLink}><p>PICADAS</p></NavLink> 
         </div>
        
     </div>

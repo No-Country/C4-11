@@ -43,8 +43,7 @@ const Login = () => {
         if(
             password.valido === 'true' && 
             password2.valido === 'true' && 
-            correo.valido === 'true' && 
-            {/**/})
+            correo.valido === 'true')
             {
             cambiarFormulario(true)
             cambiarCorreo({cambio: '', valido: 'null'});

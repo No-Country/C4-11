@@ -21,40 +21,42 @@ body{
     width: 40%;
 }
 .carousel{
-    position: absolute;
-    top: 0px !important;
-    width: 100%;
+    top: -30px;
 }
 .carousel-item img{
     margin: auto;
     width: 30% !important;
     height: 100vh;
-
+    top: -100px;
+    position: relative;
 }
+
 .container-about{
     margin-top: 50px;
     display: flex;
-
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
 }
-.picture{
-    width: 40%;
-    height: 20% !important;
+.picture-about img{
+    height: 70%;
     object-fit: contain;
+    display: block;
+    margin: auto;
+}
+.content{
+    width: 50%;
 }
 .content h1{
     font-family: 'Roboto', sans-serif;
     color: gold;
 }
-.content{
-    width: 50%;
-    margin-left: 20px;
-}
+
 .content p{
     margin-top: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    color: white;
 }
 
 .title h1{
@@ -99,9 +101,6 @@ body{
     justify-content: space-between;
 
 }
-.card-body:hover{
-    background-color: black;
-}
 
 .description-dish p{
     font-size: 1.2rem;
@@ -131,14 +130,22 @@ body{
    display: flex;
    justify-content: space-around;
    visibility: hidden;
+   position: relative;
+   left: -45px ;
 }
+
 .title-dishes a{
     color: white;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 1.5rem;
+    width: 10px;
 }
 
-
+@media only screen and (max-width: 1500px){
+   .carousel-item img{
+       width: 50% !important;
+   }
+}
 @media only screen and (max-width: 1400px){
     .cards-dishes{
         left: 390px;
@@ -157,19 +164,14 @@ body{
         width: 50% !important;     
     }
     .card{
-        width: 100%;
+        display: none;
     }
-    .card-body a{
-        font-size: 1.2rem;
+    .title-dishes{
+        visibility: visible;
+        margin: 50px 0 50px 0;
     }
-    .description-dish{
-        font-size: 1rem;
-    }
-    .cards{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-
+    .title h1{
+        display: none;
     }
     .cards-dishes .card-text{
         font-size: 1.5rem;
@@ -178,6 +180,7 @@ body{
         top: 50px;
         width: 80%;
         left: 100px;
+        top: -10px;
     }
    
     .content p{
@@ -187,34 +190,14 @@ body{
         width: 70%;
     }
   }
-
-@media only screen and (max-width: 1100px){ 
-    .cards-dishes{
-        left: 80px;
-    }
-    .cards{ 
-        display: block;
-        justify-content: center;
-        
-    }
-    .card{
-        margin-bottom: 10px;
-        width: 90%;
-        height: 250px;
-        margin: auto auto 10px;
-    }
-    .card img{
-        height: 250px;
-        object-fit: cover;
-    }
-    .card-body a{
-        font-size: 1.5rem;
-    }
-    .description-dish{
-        font-size: 1.5rem;
-    }
-
-} 
+.active{
+    color: yellow !important;
+}
+.active p{
+    font-size: 1.9rem;
+    height: 20px;
+    line-height: 35px;
+}
 @media only screen and (max-width: 900px) {
     .title-dishes{
         visibility: visible;
@@ -226,16 +209,16 @@ body{
      .title h1{
          display: none;
      }
+     .cards-dishes{
+         width: 90%;
+         margin-left: -55px;
+     }
 }
 @media only screen and (max-width: 750px){
     .cards-dishes{
-        left: 78px;
-    }
-    .card-food img{
-        width: 80% ;
+        margin-left: -60px;
     }
 }
-
 
 @media only screen and (max-width: 650px) {
 
@@ -253,34 +236,45 @@ body{
     .content{
         width: 70%;
     }
-    .title h1{
-        font-size: 2rem;
-    }
     .cards-dishes{
-        left: 60px;
+        margin-left: -70px;
+    }
+    .cards-dishes .card-text{
+        font-size: 1.4rem;
+    }
+    .title-dishes a{
+        font-size: 1.3rem;
+    }
+    .active p{
+        font-size: 1.5rem;
     }
   }
 
 @media only screen and (max-width: 500px){
 
     .cards-dishes .card-text{
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
     }
     .cards-dishes{
-        left: 52px;
-    }
-
-}
-@media only screen and (max-width: 380px){
-    .cards-dishes .card-text{
-        font-size: 1.1rem !important;
-        margin-left: -65px !important;
-    }
-    .cards-dishes{
-        left: 35px;
+        margin-left: -85px;
+        width: 95%;
     }
     .card-food .image img{
-        width: 55%;
+        width: 75%;
+ }
+
+}
+@media only screen and (max-width: 450px){
+    .cards-dishes .card-text{
+        font-size: 1.1rem;
+        margin-left: -65px;
+    }
+    .cards-dishes{
+        left: 45px;
+        margin-left: -35px;
+    }
+    .card-food .image img{
+        width: 65%;
  }
 
 }

@@ -9,20 +9,50 @@
 }
 .texto-footer{
     color: white;
-    margin-bottom: 0;
-    margin-right: 20px;
+    position: relative;
     font-weight: 600;
-
+    width: 100%;
+   
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
 }
 .icono-redes{
-   padding: 5px;
+   margin-left: 30px;
+   
 }
 .icono-redes:hover{
     transform: scale(1.1);
-    transition: 2s;
+    transition: 0.8s;
 }
 .cajon-redes{
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    margin-right: 150px;
+}
+@media only screen and (max-width: 1000px){
+    .texto-footer{
+        position: relative;
+        left: 100px;
+    }
+    .cajon-redes{
+        position: relative;
+        display: flex;
+      
+    }
+}
+@media only screen and (max-width: 770px){
+    .cajon-redes{
+        position: relative;
+        left: 150px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .cajon-redes{
+    position: relative;
+       width: 100%;
+       right: 50px;
+    }
+    .texto-footer{
+        left: 10px;
+    }
 }
