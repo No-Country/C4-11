@@ -8,30 +8,32 @@ export const UbicacionContacto=()=>{
     const [MostrarEmail, setMostrarEmail]=useState("none")
     const [MostrarConsulta, setMostrarConsulta]=useState("none")
     const [EmailCompleto, setEmailCompleto]=useState([])
+    const expresiones = {
+        usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+        password: /^.{4,12}$/, // 4 a 12 digitos.
+        correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+    }
+    
+    const validateInput = () => {
+        
+        if (expresiones.correo.test(EmailContacto) || EmailContacto.length === 0) {
+            setMostrarEmail('none')
+        } else {
+            setMostrarEmail('block')
+             setEmailContacto('')
+        }
+    }
+    
     const addNombreYApellido=(e)=>{
         setNombreYApellido(e.target.value)
         console.log(NombreYApellido)
     }
-    const addEmail=(e)=>{
-        let contador=0
-        let valor=e.target.value
-        for(let x=0; x < (valor.length); x++){
-            if((valor)[x]==="@")
-                {
-                    contador++;
-                }
-        }
-        if(contador===1){
-        setMostrarEmail("none")
-        setEmailContacto(e.target.value)
-        console.log(EmailContacto)
-        }
-        else(setMostrarEmail("block"))
-    }
-    const AddConsulta=(e)=>{
-        if((e.target.value).length<15){
+    const ValidateConsulta=(e)=>{
+        if((Consulta).length<15 && (Consulta).length>0){
             setMostrarConsulta("block")
-            
+            setConsulta('')
             
         }
         else{
@@ -42,16 +44,20 @@ export const UbicacionContacto=()=>{
 
     
     const EnviarConsulta=(event)=>{
-        
-        setEmailCompleto(
-            {
-                Nombre:{NombreYApellido},
-                email:{EmailContacto},
-                Consulta:{Consulta}
-            }
-
-        )
-         console.log(EmailCompleto)   
+        if(EmailContacto.length>0 && NombreYApellido.length>0 && Consulta.length>0){
+            setEmailCompleto(
+                {
+                    Nombre:{NombreYApellido},
+                    email:{EmailContacto},
+                    Consulta:{Consulta}
+                }
+                
+            )
+            console.log(EmailCompleto)
+        }
+         else{
+            alert("Rellenar bien los campos")
+         } 
     }
 
     return(
@@ -72,17 +78,17 @@ export const UbicacionContacto=()=>{
                     <form  className="container-inputs" >     
         <div className="input-group mb-3">
   <span className="input-group-text" id="basic-addon1">Nombre y Apellido</span>
-  <input onBlur={(e)=>addNombreYApellido(e)} type="text" name="Nombre" className="form-control" placeholder="Escribe aquí" aria-describedby="basic-addon1"></input>
+  <input onChange={(e)=>addNombreYApellido(e)} type="text" name="Nombre" className="form-control" placeholder="Escribe aquí" aria-describedby="basic-addon1"></input>
 </div>
 <div className="input-group mb-3">
   <span className="input-group-text"  id="basic-addon1">Email</span>
-  <input onBlur={(e)=>addEmail(e)} className="form-control" placeholder="Escribe aquí" aria-label="Username" aria-describedby="basic-addon1"></input>
+  <input onChange={e => setEmailContacto(e.target.value)} onBlur={validateInput} className="form-control" placeholder="Escribe aquí" aria-label="Username" aria-describedby="basic-addon1"></input>
 </div>
 <div><p className="invalid" style={{color:"red", display:MostrarEmail}}>Email Inválido.</p></div>
 <div className="input-group">
   <span className="input-group-text" id="basic-addon1">Consulta</span>
 
-  <textarea onBlur={(e)=>AddConsulta(e)} type="text" name="Mensaje" className="form-control" placeholder="Escribe aquí"  aria-describedby="basic-addon1"></textarea>
+  <textarea onChange={e=>setConsulta(e.target.value)} onBlur={(e)=>ValidateConsulta(e)} type="text" name="Mensaje" className="form-control" placeholder="Escribe aquí"  aria-describedby="basic-addon1"></textarea>
 
 </div>
 <div><p className="invalid-cons" style={{color:"red", display:MostrarConsulta}}>El texto debe contener al menos 15 caracteres.</p></div>

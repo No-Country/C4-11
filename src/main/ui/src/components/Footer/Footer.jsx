@@ -6,11 +6,11 @@ export const Footer=()=>{
             <div className="row">
             <p className="texto-footer col-md-6">Seguinos en nuestras redes!</p>
             <div className="cajon-redes col-md-5">
-            <a>
+            <a target={"blank"} href="https://www.facebook.com">
             <img className="icono-redes" src="https://i.postimg.cc/xTGT0r0V/facebook-logo-png.png"></img></a>
-            <a>
+            <a href="https://www.instagram.com" target={"_blank"}>
             <img className="icono-redes" src="https://i.postimg.cc/8z1kcy5J/instagram-logo-png.png"></img></a>
-            <a>
+            <a target={"blank"} href="https://web.whatsapp.com">
             <img className="icono-redes" src="https://i.postimg.cc/BnMSKxLh/whatsapp-logo-png.png" ></img></a>
             </div>
             </div>

@@ -4,15 +4,16 @@
     margin: auto;
 }
 .presentation{
-     background-image: url(https://i.postimg.cc/x82dCJVS/fondo-presentation.png); 
+     
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     align-items: center;
     display: flex;
-    border-top: 1px solid rgba(128, 128, 128, 0.684);
+    
     border-bottom:1px solid rgba(128, 128, 128, 0.684) ;
+    position: relative;
 }
 .text-presentation{
     color: white;
@@ -29,15 +30,21 @@
 
 }
 .carta-cerveza{
-    height: 70%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
+    position: relative;
+    align-items: center;
+    backface-visibility: hidden;
+    width: 400px;
+    height: 500px;
 }
 .container-cervezas{
     display: flex;
     align-items: center;
+    justify-content: center !important;
 }
 .titulo-nuestras-pintas{
     color: goldenrod;
@@ -56,4 +63,41 @@
 .invalid{
     margin-bottom:  16px ;
     margin-top: -10px;
+}
+.card-back{
+    width: 100%;
+    height: 100%;
+    transform: perspective(500px) rotateY(180deg);
+    
+}
+.card-front{
+    width: 100%;
+    height: 100%;
+    transform: perspective(500px) rotateY(0deg); 
+}
+.carta-cerveza:hover .card-front{
+    transform: perspective(500px) rotateY(180deg);
+    
+}
+.carta-cerveza:hover .card-back{
+    transform: perspective(500px) rotateY(360deg);
+    
+}
+.carta-cerveza div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.container-titulo{
+    margin-top: 20px;
+}
+.container-presentation{
+    background-image: url(https://i.postimg.cc/x82dCJVS/fondo-presentation.png); 
+    border-top: 1px solid rgba(128, 128, 128, 0.684);
 }
