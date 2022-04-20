@@ -16,7 +16,7 @@ export default function Card() {
           <li key={`e-${index}`}> {error} </li>
         ))}
       </ul>
-      <form >
+      <form onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
         <label htmlFor="number"></label>
         <input id="number" placeholder="Number Card" onBlur={setCardNumber} />
         {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}
@@ -28,7 +28,7 @@ export default function Card() {
         <input id="seguridad" placeholder="xxx" />
         <label htmlFor="fullName"></label>
         <input id="fullName" placeholder="Full Name" onBlur={setFullName} />
-        <label htmlFor="typeID">Tipo de documento </label>
+        <label htmlFor="typeID"></label>
         <select id="typeID">
           {state.type.map((s, i) =>
             <option key={i} value={i}>{s}</option>

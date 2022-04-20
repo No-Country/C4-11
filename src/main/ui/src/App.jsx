@@ -19,7 +19,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Carrousel />} />
+          <Route index element={<Carrousel />} />
+          <Route exact path="/Home" element={<Carrousel />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Menu" element={<Menu />} />
           <Route exact path="/Login" element={<Login />} />
@@ -28,10 +29,11 @@ function App() {
           <Route exact path="/Cervezas" element={<Cervezas />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
+          <Route exact path="/Card" element={<Card />} />
+          <Route path="*" element={<Carrousel />} />
         </Routes>
         <Footer />
       </Router>
-      <Card />
     </>
   )
 }
