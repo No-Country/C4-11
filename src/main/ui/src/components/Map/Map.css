@@ -35,7 +35,7 @@
     background-color: black;
     border: 1px solid goldenrod;
     color: goldenrod;
-    padding: 5px 10px 10px 5px;
+    padding: 10px 10px 10px 10px;
     margin-top: 10px;
     border-radius: 10px;
     display: flex;
@@ -67,8 +67,17 @@
 }
 .map-container-2{
     height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container-inputs{
     display: inline-block;
     margin-bottom: 50px;
+}
+.parte-derecha{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
 }
