@@ -13,7 +13,6 @@ const CardBeer = ({src, description}) => {
         <p className="card-text">{description}</p>
       </div>
     </div>
-
     </>
   )
 }

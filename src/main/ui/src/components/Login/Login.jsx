@@ -19,7 +19,7 @@ const Login = () => {
         usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guionbajo
         nombre: /^[a-zA-ZÀ-ÿ\s]{5,16}$/, // Letras y espacios, pueden llevar acentos.
         password: /^.{8,16}$/, // 8 a 16 digitos.
-        correo: /^[a-zA-Z0-9.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+        correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
         telefono: /^\d{7,14}$/ // 7 a 14 numeros.
     }
 
@@ -35,6 +35,9 @@ const Login = () => {
                 });
             }
         }
+    }
+    const logOut = () => {
+
     }
 
     const onSubmit = (e) => {
@@ -56,21 +59,18 @@ const Login = () => {
             cambiarFormulario(false)
         }
     };
+ 
   return (
     <main> 
         <h1>{formularioValido ? "LOG IN" : "SIGN UP"}</h1>
-        <Formulario action='' onSubmit={onSubmit}>
-         
-    
-               
+        <Formulario action='' onSubmit={onSubmit} >
+        
             <InputUser
-                label="Email"
-                placeholder="Ingrese su correo electrónico"
-         
                 estado={correo}
                 cambiarEstado={cambiarCorreo}
+                label="Email"
+                placeholder="Ingrese su correo electrónico"
                 type="email"
-               
                 name="email"
                 error="Carácteres inválidos"
                 expresionRegular={expresiones.correo}
@@ -86,7 +86,6 @@ const Login = () => {
                 error="La contraseña debe contener de 8 a 16 digitos."
                 expresionRegular={expresiones.password}
             />
-
             <InputUser
                 estado={password2}
                 cambiarEstado={cambiarPassword2}
@@ -97,21 +96,25 @@ const Login = () => {
                 error="Las contraseñas no coinciden"
                 funcion={validarPassword}
             />
-
+      
             <ButtonCentered>
-                <Button type='submit'> {formularioValido ? "ENVIAR" : "CREAR USUARIO"}</Button>
+                <Button  type='submit'> {formularioValido ? "ENVIAR" : "CREAR USUARIO"}</Button>
                 <br></br>
             </ButtonCentered>
         </Formulario>
-        <Button variant="secondary" onClick={()=>cambiarFormulario(!formularioValido)}>
+        <ButtonCentered>
+        <Button onClick={()=>cambiarFormulario(!formularioValido)}>
             {formularioValido ? "REGISTRATE"  : "LOG IN"}
             </Button>
+        </ButtonCentered>  
+        <div style={{height:"50px"}}>
             {formularioValido === false && <ErrorDiv>
-                <p>
+                <p style={{color:"white"}}>
                     <FontAwesomeIcon icon={faExclamationTriangle}/>
                 <b>Error: </b> Complete el formulario correctamente.
                 </p>
             </ErrorDiv>}
+        </div>      
     </main>
   )
 }

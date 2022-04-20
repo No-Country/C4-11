@@ -8,8 +8,9 @@ import Menu from './components/Menu/Menu';
 import Cervezas from './components/Dishes/Cervezas';
 import Picada from './components/Dishes/Picada';
 import Pizza from './components/Dishes/Pizza';
-import Login from "./components/Login/Login";
+import Login from "./components/Login/Login"
 import { Footer } from './components/Footer/Footer';
+
 
 function App() {
   return (
@@ -26,8 +27,11 @@ function App() {
           <Route exact path="/Cervezas" element={<Cervezas/>}/>          
           <Route exact path="/login" element={<Login/>}/>  
         </Routes>
+   
         <Footer />
       </Router>
+
+      
     </>
   )  
 }

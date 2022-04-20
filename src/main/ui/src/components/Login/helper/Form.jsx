@@ -59,15 +59,15 @@ const Input = styled.input`
 
 const ErrorMessage = styled.p`
     font-size: 20px;
-    margin: 0;
+    margin-bottom: -10px;
     color: ${colors.error};
-    display: none;
+    visibility: hidden;
 
     ${props => props.valido === 'true' && css`
-        display: none;
+        visibility: hidden;
     `}
     ${props => props.valido === 'false' && css`
-        display: block;
+        visibility: visible;
     `}
 `;
 
@@ -90,12 +90,10 @@ const IconVal = styled(FontAwesomeIcon)`
 `;
 
 const ButtonCentered = styled.div`
-    grid-column: span 2;
-    margin: auto;
-    
-    @media (max-width: 800px){
-        grid-column: span 1;
-    }
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+   
 `;
 
 const Button = styled.button`
@@ -119,14 +117,26 @@ const Success = styled.p`
 `;
 
 const ErrorDiv = styled.div`
+
     height: 45px;
     line-height: 45px;
     background: ${colors.error};
     padding: 0px 15px;
     border-radius: 3px;
-    grid-column: span 2;
+    
     b{
         margin-left: 10px;
     }
+
+    @media(max-width: 600px){
+        font-size: 0.8rem;   
+    }
+    @media(max-width: 450px){
+        position: relative;
+        width: 320px;
+        left: -35px;
+    }
+
+
 `;
 export {Formulario,  Label, GroupInput, Input, IconVal, ErrorMessage, ButtonCentered, Button, Success, ErrorDiv}

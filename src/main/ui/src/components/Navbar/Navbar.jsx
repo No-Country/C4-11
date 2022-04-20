@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../../assets/img/logo.png";
 import "./style.css";
 import { Link } from 'react-router-dom';
-
+import log from "../Login/img/log.png"
 
 const Navbar= () => {
   return (
@@ -34,6 +34,11 @@ const Navbar= () => {
         </li>
         <li className="nav-item">
         <Link className="nav-link" to={"/"}>CONTACTO</Link>
+        </li>
+        <li className="nav-item">
+        <Link className="nav-link log" to={"/login"}>LOG IN
+          <img src={log} alt="..."/>
+        </Link>
         </li>
       </ul>
     
