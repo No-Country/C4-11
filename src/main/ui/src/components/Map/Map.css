@@ -72,3 +72,9 @@
     display: inline-block;
     margin-bottom: 50px;
 }
+.parte-derecha{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+}
