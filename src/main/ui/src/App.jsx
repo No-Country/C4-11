@@ -25,8 +25,10 @@ function App() {
           <Route exact path="/Pizza" element={<Pizza />} />
           <Route exact path="/Cervezas" element={<Cervezas />} />
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
-        </Routes>
+        </Routes>  
+       
       </Router>
+
     </>
   )
 }

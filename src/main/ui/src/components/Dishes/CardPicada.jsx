@@ -8,7 +8,7 @@ const CardPicada = ({src, description}) => {
     <div className='cards-dishes'>
       <div className="card-food">
           <div className='image'>
-            <img src={src} className="card-img-top" alt="..."/>
+            <Img src={src} className="card-img-top" alt="..."/>
           </div>
      </div>     
       <div className="card-body-dishes">

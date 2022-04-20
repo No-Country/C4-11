@@ -12,7 +12,7 @@ const Menu = () => {
         </div>
         <div className='cards'>  
         <div className="card">
-            <img src={Pizza} alt="..."/>
+            <Img src={Pizza} alt="..."/>
             <div className="card-body">
             <Link to={"/Pizza"}> <div><p className="card-text">PIZZAS</p></div></Link>
             <div className='description-dish'><p>Variedad en Pizzas</p></div>
@@ -20,7 +20,7 @@ const Menu = () => {
         </div>  
 
         <div className="card">
-            <img src={Picada} alt="..."/>
+            <Img src={Picada} alt="..."/>
             <div className="card-body">
             <Link to={"/Picada"}><div><p className="card-text">PICADAS</p></div></Link> 
             <div className='description-dish'><p>De todo tipo</p></div>
@@ -28,7 +28,7 @@ const Menu = () => {
         </div>
          
         <div className="card">
-            <img src={Cerveza} alt="..."/>
+            <Img src={Cerveza} alt="..."/>
             <div className="card-body">
             <Link to={"/cervezas"}> <div><p className="card-text">CERVEZAS</p></div></Link>
             <div className='description-dish'><p>Clásicas y Artesanales</p></div>
