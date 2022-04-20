@@ -9,21 +9,17 @@ import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, C
 
 export default function Reservation({ date }) {
   const [bookingDay, dispatch] = useReducer(reducer, date, getDaysToBook)
-
   console.log(bookingDay)
   const setSeats = e => {
     dispatch({ type: "SET_SEATS", payload: e.target.value })
-  }
+    }
   const setSession = e => {
-    dispatch({ type: "SET_SESSION", payload: e.target.value })
-  }
+    dispatch({ type: "SET_SESSION", payload: e.target.value })  }
 
   const setZone = e => {
     dispatch({ type: "SET_ZONE", payload: e.target.value })
   }
-
   const showReserva = () => { console.log("estamos en la reserva") };
-
   return (
     <Container >
       <ContenedorPicker className="row ">
@@ -50,10 +46,10 @@ export default function Reservation({ date }) {
           </SelectSession>
         </ChoiceContainerTres>
       </ContenedorPicker>
-      <Calendar >
+      <Calendar className="">
         {
           bookingDay.days.map((day, i) => (
-            <ButtonCalendar key={i} className="card"
+            <ButtonCalendar key={i} className="card "
               onClick={() => dispatch({ type: "SELECT_DAY", payload: i })}            >
               <p style={i === bookingDay.date ? { fontWeight: "bolder" } : null}>{day.getDate()}</p>
               <p>{month[day.getMonth()]}</p>
@@ -63,7 +59,6 @@ export default function Reservation({ date }) {
       </Calendar>
       <div className="free-tables">
         <TituloH3>Mesas disponibles</TituloH3>
-
         {
           bookingDay.tables &&
           bookingDay.tables.map((table, i) => table &&
@@ -73,25 +68,16 @@ export default function Reservation({ date }) {
           )
         }
       </div>
-      {/* // TODO: no mostrar el button mienstras no este seleccionada una mesa libre */}
-
+      {/* // TODO: no mostrar el button mientras no este seleccionada una mesa libre */}
       <ContenedorImagen className="map ">
         {bookingDay.zone
           ? <Label>mapa {zones[bookingDay.zone]}</Label>
           : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
         }
-       
       </ContenedorImagen>
       <ContenedorBotonReserva>
-        {bookingDay.choiceTable &&  <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>}
-
+        {bookingDay.choiceTable && <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>}
       </ContenedorBotonReserva>
-     
-         
-         
-
-        
-
     </Container>
   )
 }
