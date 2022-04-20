@@ -5,7 +5,7 @@ import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
 import { month, sessions, zones } from "../../static.json"
-import { Calendar, ButtonCalendar, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
+import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
   const [bookingDay, dispatch] = useReducer(reducer, date, getDaysToBook)
@@ -67,23 +67,31 @@ export default function Reservation({ date }) {
         {
           bookingDay.tables &&
           bookingDay.tables.map((table, i) => table &&
-            (<button key={i}
+            (<BotonMesas key={i}
               onClick={() => dispatch({ type: "SET_CHOICE", payload: i })}
-            >{i}</button>)
+            >{i}</BotonMesas>)
           )
         }
       </div>
       {/* // TODO: no mostrar el button mienstras no este seleccionada una mesa libre */}
 
-      <div className="map ">
+      <ContenedorImagen className="map ">
         {bookingDay.zone
-          ? <h1>mapa {zones[bookingDay.zone]}</h1>
-          : <img src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
+          ? <Label>mapa {zones[bookingDay.zone]}</Label>
+          : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
         }
-      </div>
-      <div>
-        <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>
-      </div>
+       
+      </ContenedorImagen>
+      <ContenedorBotonReserva>
+        {bookingDay.choiceTable &&  <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>}
+
+      </ContenedorBotonReserva>
+     
+         
+         
+
+        
+
     </Container>
   )
 }
