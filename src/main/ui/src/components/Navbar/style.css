@@ -11,48 +11,74 @@ body{
 }
 .nav-link{
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     color: white !important;
+
+}
+.nav-link img{
+    position: relative;
+    width: 35px;
+    margin-left: 5px;
+    bottom: 4px;
+    filter: invert(100%);
+}
+.log{
+    position: relative;
+    bottom: 4.5px;
 }
 .nav-link:hover{
-    color: none !important;
+    color: goldenrod !important;
+    transform: scale(1.1);
+    transition: 1s;
 }
 .navbar-brand{
     width: 40%;
 }
 .carousel{
-    width: 100%;
+    top: -30px;
 }
 .carousel-item img{
     margin: auto;
     width: 30% !important;
     height: 100vh;
-
+    top: -100px;
+    position: relative;
 }
+
 .container-about{
     margin-top: 50px;
     display: flex;
-
-    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
+    flex-wrap: wrap;
+
 }
-.picture{
-    width: 40%;
-    height: 20% !important;
+.picture-about{
+    margin: 0 auto 50px;
+    height: 80vh;
+}
+.picture-about img{
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
+
 .content h1{
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     color: gold;
 }
 .content{
-    width: 50%;
+    width: 60vw;
     margin-left: 20px;
+
 }
 .content p{
     margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
+     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     font-size: 1.5rem;
+    color: white;
 }
 
 .title h1{
@@ -97,9 +123,6 @@ body{
     justify-content: space-between;
 
 }
-.card-body:hover{
-    background-color: black;
-}
 
 .description-dish p{
     font-size: 1.2rem;
@@ -129,14 +152,22 @@ body{
    display: flex;
    justify-content: space-around;
    visibility: hidden;
+   position: relative;
+   left: -70px;
 }
+
 .title-dishes a{
     color: white;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 1.5rem;
+    width: 10px;
 }
 
-
+@media only screen and (max-width: 1500px){
+   .carousel-item img{
+       width: 50% !important;
+   }
+}
 @media only screen and (max-width: 1400px){
     .cards-dishes{
         left: 390px;
@@ -155,19 +186,14 @@ body{
         width: 50% !important;     
     }
     .card{
-        width: 100%;
+        display: none;
     }
-    .card-body a{
-        font-size: 1.2rem;
+    .title-dishes{
+        visibility: visible;
+        margin: 50px 0 50px 0;
     }
-    .description-dish{
-        font-size: 1rem;
-    }
-    .cards{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-
+    .title h1{
+        display: none;
     }
     .cards-dishes .card-text{
         font-size: 1.5rem;
@@ -176,6 +202,7 @@ body{
         top: 50px;
         width: 80%;
         left: 100px;
+        top: -10px;
     }
    
     .content p{
@@ -185,34 +212,16 @@ body{
         width: 70%;
     }
   }
+.active{
+    color: yellow !important;
+}
+.active p{
+    font-size: 1.9rem;
+    height: 20px;
+    line-height: 35px; 
+    letter-spacing: 4px; 
+}
 
-@media only screen and (max-width: 1100px){ 
-    .cards-dishes{
-        left: 80px;
-    }
-    .cards{ 
-        display: block;
-        justify-content: center;
-        
-    }
-    .card{
-        margin-bottom: 10px;
-        width: 90%;
-        height: 250px;
-        margin: auto auto 10px;
-    }
-    .card img{
-        height: 250px;
-        object-fit: cover;
-    }
-    .card-body a{
-        font-size: 1.5rem;
-    }
-    .description-dish{
-        font-size: 1.5rem;
-    }
-
-} 
 @media only screen and (max-width: 900px) {
     .title-dishes{
         visibility: visible;
@@ -224,16 +233,19 @@ body{
      .title h1{
          display: none;
      }
+     .cards-dishes{
+         width: 90%;
+         margin-left: -55px;
+     }
 }
 @media only screen and (max-width: 750px){
     .cards-dishes{
-        left: 78px;
+        margin-left: -60px;
     }
-    .card-food img{
-        width: 80% ;
+    .picture-about{
+        width: 70%;
     }
 }
-
 
 @media only screen and (max-width: 650px) {
 
@@ -251,34 +263,59 @@ body{
     .content{
         width: 70%;
     }
-    .title h1{
-        font-size: 2rem;
-    }
     .cards-dishes{
-        left: 60px;
+        margin-left: -70px;
+    }
+    .cards-dishes .card-text{
+        font-size: 1.4rem;
+    }
+    .title-dishes a{
+        font-size: 1.3rem;
+    }
+    .active p{
+        font-size: 1.5rem;
+    }
+    .picture-about{
+        position: relative;
+        width: 55%;
+        margin-top: -20px;
+        margin-bottom: -5px;
     }
   }
 
 @media only screen and (max-width: 500px){
-
+   
     .cards-dishes .card-text{
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
     }
     .cards-dishes{
-        left: 52px;
+        margin-left: -85px;
+        width: 95%;
     }
+
+ .picture-about{
+    width: 70%;
+    margin-top: -10px;
+}
 
 }
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 450px){
     .cards-dishes .card-text{
-        font-size: 1.1rem !important;
-        margin-left: -65px !important;
+        font-size: 1.1rem;
+        margin-left: -65px;
     }
     .cards-dishes{
-        left: 35px;
+        left: 45px;
+        margin-left: -35px;
     }
     .card-food .image img{
-        width: 55%;
+        width: 65%;
  }
+    .picture-about{
+        position: relative;
+        width: 60%;
+        margin-top: -120px;
+        bottom: -50px;
+    }
 
 }

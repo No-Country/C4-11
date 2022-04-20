@@ -8,24 +8,28 @@ import Menu from './components/Menu/Menu';
 import Cervezas from './components/Dishes/Cervezas';
 import Picada from './components/Dishes/Picada';
 import Pizza from './components/Dishes/Pizza';
-import Login from "./components/Login/Login";
+import Login from "./components/Login/Login"
+import { Footer } from './components/Footer/Footer';
 import Reservation from "./components/Reservation/Reservation"
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar />
+      <>
+      <Router> 
+       <Navbar/>   
         <Routes>
-          <Route exact path="/" element={<Carrousel />} />
-          <Route exact path="/About" element={<About />} />
-          <Route exact path="/Menu" element={<Menu />} />
-          <Route exact path="/Login" element={<Login />} />
-          <Route exact path="/Picada" element={<Picada />} />
-          <Route exact path="/Pizza" element={<Pizza />} />
-          <Route exact path="/Cervezas" element={<Cervezas />} />
+          <Route exact path="/" element={<Carrousel/>}/>
+          <Route exact path="/About" element={<About/>}/>
+          <Route exact path="/Menu" element={<Menu/>}/>
+          <Route exact path="/Login" element={<Login/>}/>
+          <Route exact path="/Picada" element={<Picada/>}/>
+          <Route exact path="/Pizza" element={<Pizza/>}/>
+          <Route exact path="/Cervezas" element={<Cervezas/>}/>          
+          <Route exact path="/login" element={<Login/>}/>  
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
         </Routes>
+   
+        <Footer />
       </Router>
     </>
   )
