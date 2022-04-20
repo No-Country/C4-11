@@ -6,17 +6,17 @@ import Menu from '../Menu/Menu';
 const Cervezas = () => {
   return (
     <>
-    <Menu/>
-    {
-      dataBeer.map(({src, description}, index)=>(
-        <CardBeer
-        src={src} 
-        description={description} 
-        key={index}
-        />
-      ))
-    }
-  </>  
+      <Menu />
+      {
+        dataBeer.map(({ src, description }, index) => (
+          <CardBeer
+            src={src}
+            description={description}
+            key={index}
+          />
+        ))
+      }
+    </>
   )
 }
 

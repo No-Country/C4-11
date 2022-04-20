@@ -6,7 +6,7 @@ const CardBeer = ({src, description}) => {
     <div className='cards-dishes'>
       <div className="card-food">
           <div className='image'>
-            <Img src={src} className="card-img-top" alt="..."/>
+            <img src={src} className="card-img-top" alt="..."/>
           </div>
      </div>      
       <div className="card-body-dishes">

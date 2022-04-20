@@ -5,19 +5,19 @@ import CardPicada from './CardPicada';
 
 const Picada = () => {
   return (
-    <><Menu/>
+    <>
+      <Menu />
+      {
+        dataPicada.map(({ src, description }, index) => (
+          <CardPicada
+            src={src}
+            description={description}
+            key={index}
+          />
+        ))
+      }
+    </>
 
-    {
-      dataPicada.map(({src, description}, index)=>(
-        <CardPicada
-        src={src} 
-        description={description} 
-        key={index}
-        />
-      ))
-    }
-  </>  
-  
   )
 }
 

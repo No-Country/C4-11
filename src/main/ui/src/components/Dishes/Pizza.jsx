@@ -6,19 +6,17 @@ import Menu from '../Menu/Menu';
 const Pizza = () => {
   return (
     <>
-    <Menu/>
-
-     
-    {
-      dataPizza.map(({src, description}, index)=>(
-        <CardPizza
-        src={src} 
-        description={description} 
-        key={index}
-        />
-      ))
-    }
-  </>  
+      <Menu />
+      {
+        dataPizza.map(({ src, description }, index) => (
+          <CardPizza
+            src={src}
+            description={description}
+            key={index}
+          />
+        ))
+      }
+    </>
   )
 }
 

@@ -4,49 +4,49 @@ import "./style.css";
 import { Link } from 'react-router-dom';
 
 
-const Navbar= () => {
+const Navbar = () => {
   return (
     <>
-    <nav className="navbar nav-menu navbar-expand-lg navbar-dark">
-  <div className="container-fluid">
-    <a href="/"> 
-      <img className="navbar-brand" src={logo} alt="" />
-    </a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{marginRight:"60px"}}>
-        <li className="nav-item">
-          <Link className="nav-link" to={"/Home"}>HOME</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to={"/About"}>QUIÉNES SOMOS</Link>
-        </li>
-        <li className="nav-item">
-        <Link className="nav-link" to={"/menu"}>MENÚ</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to={"/Ubicacion"}>UBICACIÓN</Link>
-        </li>
-        <li className="nav-item">
-        <Link className="nav-link" to={"/Reserva"}>RESERVA</Link>
-        </li>
-        <li className="nav-item">
-        <Link className="nav-link" to={"/"}>UBICACIÓN</Link>
-        </li>
-        <li className="nav-item">
-        <Link className="nav-link" to={"/"}>CONTACTO</Link>
-        </li>
-      </ul>
-    
-    </div>
-  </div>
-</nav>
-</>
+      <nav className="navbar nav-menu navbar-expand-lg navbar-dark">
+        <div className="container-fluid">
+          <a href="/">
+            <img className="navbar-brand" src={logo} alt="" />
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{ marginRight: "60px" }}>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/"}>HOME</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/About"}>QUIÉNES SOMOS</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/menu"}>MENÚ</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/Ubicacion"}>UBICACIÓN</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/Reserva"}>RESERVA</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/"}>UBICACIÓN</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/"}>CONTACTO</Link>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </>
   )
 }
 
-export default  Navbar
+export default Navbar
 
 
