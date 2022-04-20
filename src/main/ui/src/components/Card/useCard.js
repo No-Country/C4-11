@@ -3,7 +3,8 @@ import { useReducer } from "react";
 
 const initialState = {
   cardNumber: undefined,
-  expire: undefined,      // array de 2 campos
+  expMonth: undefined,
+  expYear: undefined,
   ccv: undefined,
   fullName: undefined,
   type: ["DNI", "ID", "LE", "LL"],
@@ -16,6 +17,18 @@ export const useCard = () => {
   const [state, dispatch] = useReducer(
     (prevState, action) => {
       switch (action.type) {
+        case "SET_CARD_NUMBER":
+          return { ...prevState, cardNumber: action.payload }
+        case "SET_EXPIRE_MONTH":
+          return { ...prevState, expMonth: action.payload }
+        case "SET_EXPIRE_YEAR":
+          return { ...prevState, expYear: action.payload}
+        case "SET_FULLNAME":
+          return { ...prevState, fullName: action.payload }
+        case "SET_EMAIL":
+          return { ...prevState, email: action.payload }
+        case "SET_ID_NUMBER":
+          return { ...prevState, idNumber: action.payload}
         case "CLEAN_ERRORS":
           return { ...prevState, errors: [] };
         default:
@@ -26,13 +39,19 @@ export const useCard = () => {
   );
 
   const cleanErrors = () => dispatch({ type: "CLEAN_ERRORS" })
+  const setCardNumber = e => dispatch({ type: "SET_CARD_NUMBER", payload: e.target.value });
+  const setExpMonth = e => dispatch({ type: "SET_EXPIRE_MONTH", payload: e.target.value });
+  const setExpYear = e => dispatch({ type: "SET_EXPIRE_YEAR", payload: e.target.value });
+  const setFullName = e => dispatch({ type: "SET_FULLNAME", payload: e.target.value });
+  const setIdNumber = e => dispatch({type: "SET_ID_NUMBER", payload: e.target.value});
+  const setEmail = e => dispatch({ type: "SET_EMAIL", payload: e.target.value });
 
-  // const validateInput = fn => {
-  //   const error = fn(state.value)
-  //   if (error !==null){
-  //     dispatch({type: "ADD_ERROR", error: error})
-  //   }
-  // }
+  const validateInput = fn => {
+    const error = fn(state.value)
+    if (error !== null) {
+      dispatch({ type: "ADD_ERROR", error: error })
+    }
+  }
 
-  return { state, cleanErrors }
+  return { state, setCardNumber, setExpMonth, setExpYear, setFullName, setIdNumber, setEmail, validateInput, cleanErrors }
 }
