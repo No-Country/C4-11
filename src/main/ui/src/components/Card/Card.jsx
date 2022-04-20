@@ -1,18 +1,9 @@
-import React, { useReducer } from "react";
-import reducer from "./reducerCard"
-const state = {
-  cardNumber: undefined,
-  expire: undefined,      // array de 2 campos
-  ccv: undefined,
-  fullName: undefined,
-  type: ["dni", "id", "LE", "LL"],
-  idNumber: undefined,
-  email: undefined
-}
+import React from "react";
+import { useCard } from "./useCard";
 
 export default function Card() {
-  const [card, dispatch] = useReducer(reducer, state)
-  console.log(card)
+  const {state} = useCard()
+  
   return (
     <>
       <form >
@@ -29,7 +20,7 @@ export default function Card() {
         <input id="fullName" placeholder="Full Name" />
         <label htmlFor="typeID">Tipo de documento </label>
         <select id="typeID">
-          {card.type.map((s, i) =>
+          {state.type.map((s, i) =>
             <option key={i} value={i}>{s}</option>
           )}
         </select>
