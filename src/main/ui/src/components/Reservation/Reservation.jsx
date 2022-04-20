@@ -5,6 +5,7 @@ import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
 import { month, sessions, zones } from "../../static.json"
+import { Link } from "react-router-dom"
 import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
@@ -12,9 +13,10 @@ export default function Reservation({ date }) {
   console.log(bookingDay)
   const setSeats = e => {
     dispatch({ type: "SET_SEATS", payload: e.target.value })
-    }
+  }
   const setSession = e => {
-    dispatch({ type: "SET_SESSION", payload: e.target.value })  }
+    dispatch({ type: "SET_SESSION", payload: e.target.value })
+  }
 
   const setZone = e => {
     dispatch({ type: "SET_ZONE", payload: e.target.value })
@@ -68,16 +70,19 @@ export default function Reservation({ date }) {
           )
         }
       </div>
-      {/* // TODO: no mostrar el button mientras no este seleccionada una mesa libre */}
+      <ContenedorBotonReserva>
+        {bookingDay.choiceTable >= 0 &&
+          <Link to="/card">
+            <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>
+          </Link>
+        }
+      </ContenedorBotonReserva>
       <ContenedorImagen className="map ">
         {bookingDay.zone
           ? <Label>mapa {zones[bookingDay.zone]}</Label>
           : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
         }
       </ContenedorImagen>
-      <ContenedorBotonReserva>
-        {bookingDay.choiceTable && <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>}
-      </ContenedorBotonReserva>
     </Container>
   )
 }
