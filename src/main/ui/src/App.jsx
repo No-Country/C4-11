@@ -14,21 +14,20 @@ import Reservation from "./components/Reservation/Reservation"
 
 function App() {
   return (
-      <>
-      <Router> 
-       <Navbar/>   
+    <>
+      <Router>
+        <Navbar />
         <Routes>
-          <Route exact path="/" element={<Carrousel/>}/>
-          <Route exact path="/About" element={<About/>}/>
-          <Route exact path="/Menu" element={<Menu/>}/>
-          <Route exact path="/Login" element={<Login/>}/>
-          <Route exact path="/Picada" element={<Picada/>}/>
-          <Route exact path="/Pizza" element={<Pizza/>}/>
-          <Route exact path="/Cervezas" element={<Cervezas/>}/>          
-          <Route exact path="/login" element={<Login/>}/>  
+          <Route exact path="/" element={<Carrousel />} />
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Menu" element={<Menu />} />
+          <Route exact path="/Login" element={<Login />} />
+          <Route exact path="/Picada" element={<Picada />} />
+          <Route exact path="/Pizza" element={<Pizza />} />
+          <Route exact path="/Cervezas" element={<Cervezas />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
         </Routes>
-   
         <Footer />
       </Router>
     </>
