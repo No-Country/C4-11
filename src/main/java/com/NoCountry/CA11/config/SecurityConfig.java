@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.GET, "/**").permitAll()
-				.antMatchers("/auth/**").permitAll().anyRequest().authenticated().and().formLogin()
+				.antMatchers("/auth/**").permitAll().and().formLogin()
 				.loginPage("/auth/*").usernameParameter("email").passwordParameter("password").defaultSuccessUrl("/")
 				.loginProcessingUrl("/logincheck").failureUrl("/login?error=error").permitAll().and().logout()
 				.logoutUrl("/logout").logoutSuccessUrl("/login?logout");
@@ -44,6 +44,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+		auth.inMemoryAuthentication()
+			.withUser("admin")
+			.password(passwordEncoder().encode("admin"))
+			.roles("ADMIN");
 	}
 	
 	@Override
@@ -51,5 +55,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public AuthenticationManager authenticationManagerBean() throws Exception {
 		return super.authenticationManagerBean();
 	}
+	
 
 }
