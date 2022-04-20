@@ -4,7 +4,7 @@ import Beer1 from "../../assets/img/beer1.jpg";
 import Beer2 from "../../assets/img/beer2.jpg";
 import Beer3 from "../../assets/img/beer3.jpg";
 import {Map} from "../Map/Map"
-import { Presentation } from '../presentation/presentation';
+import { Presentation } from '../Presentation/presentation';
 const Carrousel = () => {
   return (
     <>
