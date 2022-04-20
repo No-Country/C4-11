@@ -11,6 +11,7 @@ import Pizza from './components/Dishes/Pizza';
 import Login from "./components/Login/Login"
 import { Footer } from './components/Footer/Footer';
 import Reservation from "./components/Reservation/Reservation"
+import Card from "./components/Card/Card";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      <Card />
     </>
   )
 }
