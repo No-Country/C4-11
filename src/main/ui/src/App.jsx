@@ -31,7 +31,7 @@ function App() {
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
           <Route exact path="/Card" element={<Card />} />
           <Route path="*" element={<Carrousel />} />
-        </Routes>
+        </Routes>         
         <Footer />
       </Router>
     </>
