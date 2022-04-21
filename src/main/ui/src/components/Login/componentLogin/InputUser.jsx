@@ -41,7 +41,7 @@ const InputUser = ({estado, cambiarEstado, label, placeholder, type, name, error
           </GroupInput>
           <ErrorMessage valido={estado.valido}>{error}
         </ErrorMessage>
-    </div>
+    </div> 
   )
 }
 

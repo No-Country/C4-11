@@ -6,7 +6,8 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 main{
-    max-width: 1000px;
+    height: 100vh;
+    max-width: 800px;
     width: 90%;
     margin: auto;
     padding: 40px;

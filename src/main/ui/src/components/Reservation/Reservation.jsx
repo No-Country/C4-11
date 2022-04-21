@@ -5,11 +5,11 @@ import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
 import { month, sessions, zones } from "../../static.json"
-import { Calendar, ButtonCalendar, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
+import { Link } from "react-router-dom"
+import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
   const [bookingDay, dispatch] = useReducer(reducer, date, getDaysToBook)
-
   console.log(bookingDay)
   const setSeats = e => {
     dispatch({ type: "SET_SEATS", payload: e.target.value })
@@ -21,9 +21,7 @@ export default function Reservation({ date }) {
   const setZone = e => {
     dispatch({ type: "SET_ZONE", payload: e.target.value })
   }
-
   const showReserva = () => { console.log("estamos en la reserva") };
-
   return (
     <Container >
       <ContenedorPicker className="row ">
@@ -50,10 +48,10 @@ export default function Reservation({ date }) {
           </SelectSession>
         </ChoiceContainerTres>
       </ContenedorPicker>
-      <Calendar >
+      <Calendar className="">
         {
           bookingDay.days.map((day, i) => (
-            <ButtonCalendar key={i} className="card"
+            <ButtonCalendar key={i} className="card "
               onClick={() => dispatch({ type: "SELECT_DAY", payload: i })}            >
               <p style={i === bookingDay.date ? { fontWeight: "bolder" } : null}>{day.getDate()}</p>
               <p>{month[day.getMonth()]}</p>
@@ -63,27 +61,28 @@ export default function Reservation({ date }) {
       </Calendar>
       <div className="free-tables">
         <TituloH3>Mesas disponibles</TituloH3>
-
         {
           bookingDay.tables &&
           bookingDay.tables.map((table, i) => table &&
-            (<button key={i}
+            (<BotonMesas key={i}
               onClick={() => dispatch({ type: "SET_CHOICE", payload: i })}
-            >{i}</button>)
+            >{i}</BotonMesas>)
           )
         }
       </div>
-      {/* // TODO: no mostrar el button mienstras no este seleccionada una mesa libre */}
-
-      <div className="map ">
-        {bookingDay.zone
-          ? <h1>mapa {zones[bookingDay.zone]}</h1>
-          : <img src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
+      <ContenedorBotonReserva>
+        {bookingDay.choiceTable >= 0 &&
+          <Link to="/card">
+            <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>
+          </Link>
         }
-      </div>
-      <div>
-        <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>
-      </div>
+      </ContenedorBotonReserva>
+      <ContenedorImagen className="map ">
+        {bookingDay.zone
+          ? <Label>mapa {zones[bookingDay.zone]}</Label>
+          : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
+        }
+      </ContenedorImagen>
     </Container>
   )
 }

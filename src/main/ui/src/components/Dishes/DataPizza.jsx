@@ -10,31 +10,31 @@ const dataPizza = [
     },
     {
         src: Pizza2,
-        description: "Pizza Especial"
+        description: "Vegetariana"
     },
     {
         src: Pizza3,
-        description: "Pizza Especial"
+        description: "Pizza con Salame"
     },
     {
         src: Pizza4,
-        description: "Pizza Especial"
+        description: "Pizza con Champiñones"
     },
     {
         src: Pizza1,
-        description: "Pizza Especial"
+        description: "Pizza con Anchoas"
     },
     {
         src: Pizza2,
-        description: "Pizza Especial"
+        description: "Veggie sin TACC"
     },
     {
         src: Pizza3,
-        description: "Pizza Especial"
+        description: "Pizza con chorizo"
     },
     {
         src: Pizza4,
-        description: "Pizza Especial"
+        description: "Verduras gratinadas"
     },
 
 

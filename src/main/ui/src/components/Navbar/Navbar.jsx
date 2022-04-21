@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{marginRight:"60px"}}>
         <li className="nav-item">
-          <Link className="nav-link" to={"/"}>HOME</Link>
+          <Link className="nav-link" to={"/Home"}>HOME</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to={"/About"}>QUIÉNES SOMOS</Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link className="nav-link" to={"/menu"}>MENÚ</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link" to={"/"}>RESERVA</Link>
+        <Link className="nav-link" to={"/Reserva"}>RESERVA</Link>
         </li>
         <li className="nav-item">
         <a className="nav-link" href='#Map'>UBICACIÓN</a>
@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link className="nav-link" to={"/"}>CONTACTO</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link log" to={"/login"}>LOG IN
+        <Link className="nav-link log" to={"/login"}>
           <img src={log} alt="..."/>
         </Link>
         </li>

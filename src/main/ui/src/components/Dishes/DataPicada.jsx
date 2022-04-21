@@ -6,35 +6,35 @@ import Picada4 from "../../assets/img/picada4.png";
 const dataPicada = [
     {
         src: Picada1,
-        description: "Especial para 4 Personas"
+        description: "Picada Especial"
     },
     {
         src: Picada2,
-        description: "Especial para 4 Personas"
+        description: "Carne, chorizo y papas"
     },
     {
         src: Picada3,
-        description: "Especial para 4 Personas"
+        description: "Especial frutos del mar"
     },
     {
         src: Picada4,
-        description: "Especial para 4 Personas"
+        description: "Especial de Quesos"
     },
     {
         src: Picada1,
-        description: "Especial para 4 Personas"
+        description: "Camarones y langostinos"
     },
     {
         src: Picada2,
-        description: "Especial para 4 Personas"
+        description: "Especial de Embutidos"
     },
     {
         src: Picada3,
-        description: "Especial para 4 Personas"
+        description: "Especial de Parrilla"
     },
     {
         src: Picada4,
-        description: "Especial para 4 Personas"
+        description: "Quesos de la Patagonia"
     },
 
 

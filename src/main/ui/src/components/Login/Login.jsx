@@ -15,34 +15,27 @@ const Login = () => {
 
   const [formularioValido, cambiarFormulario] = useState(null);
 
-    const expresiones = {
-        usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guionbajo
-        nombre: /^[a-zA-ZÀ-ÿ\s]{5,16}$/, // Letras y espacios, pueden llevar acentos.
-        password: /^.{8,16}$/, // 8 a 16 digitos.
-        correo: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-        telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-    }
+  const expresiones = {
+    usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guionbajo
+    nombre: /^[a-zA-ZÀ-ÿ\s]{5,16}$/, // Letras y espacios, pueden llevar acentos.
+    password: /^.{8,16}$/, // 8 a 16 digitos.
+    correo: /^[a-zA-Z0-9.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
   }
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    if (
-      password.valido === 'true' &&
-      password2.valido === 'true' &&
-      correo.valido === 'true' &&
-      {/**/ }) {
-      cambiarFormulario(true)
-      cambiarCorreo({ cambio: '', valido: 'null' });
-      cambiarPassword({ cambio: '', valido: null });
-      cambiarPassword2({ cambio: '', valido: null });
-      window.location.href = "./Reservas"
-      //
+  const validarPassword = () => {
+    if (password.campo.length > 0) {
+      if (password.campo !== password2.campo) {
+        cambiarPassword2((prevState) => {
+          return { ...prevState, valido: 'false' }
+        })
+      } else {
+        cambiarPassword2((prevState) => {
+          return { ...prevState, valido: 'true' }
+        });
+      }
     }
-    const logOut = () => {
-
-    }
-
+  }
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -55,15 +48,15 @@ const Login = () => {
             cambiarCorreo({cambio: '', valido: 'null'});
             cambiarPassword({cambio: '', valido: null});
             cambiarPassword2({cambio: '', valido: null});
-            window.location.href="./Reservas"
-            //
+            window.location.href="./reserva"
+            alert("Usuario Logueado")
         }
         else{
             cambiarFormulario(false)
         }
     };
- 
   return (
+    <>
     <main> 
         <h1>{formularioValido ? "LOG IN" : "SIGN UP"}</h1>
         <Formulario action='' onSubmit={onSubmit} >
@@ -117,8 +110,9 @@ const Login = () => {
                 <b>Error: </b> Complete el formulario correctamente.
                 </p>
             </ErrorDiv>}
-        </div>      
+        </div>  
     </main>
+    </>
   )
 }
 
