@@ -3,7 +3,7 @@ import { getDaysToBook, getTables } from "../../utils/date-wrangler";
 export default function reducer(state, action) {
   switch (action.type) {
     case "SELECT_DAY":
-      return { ...state, date: action.payload }
+      return { ...state, date: state.days[action.payload] }
     case "SET_SESSION":
       // Si zone está seteado y cambio session debería acutalizar la disponibilidad
       return { ...state, session: action.payload }

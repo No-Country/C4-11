@@ -1,12 +1,16 @@
 import React from "react";
 import { useCard } from "./useCard";
 import { textCheck } from "../../utils/regex";
+import { useLocation, useNavigate} from "react-router-dom";
 
 export default function Card() {
+  const navigate = useNavigate();
+  const { state: { reserva } } = useLocation();
+  console.log(reserva)
   const { state, setCardNumber, setExpMonth, setExpYear, setFullName, setIdNumber, setEmail, validateInput, cleanErrors } = useCard();
   const validateEmail = () => {
     cleanErrors();
-    validateInput(v => textCheck.email.test(v) ? "Mail incorrecto": '')
+    validateInput(v => textCheck.email.test(v) ? "Mail incorrecto" : '')
   }
   console.log(state);
   return (
@@ -16,7 +20,7 @@ export default function Card() {
           <li key={`e-${index}`}> {error} </li>
         ))}
       </ul>
-      <form onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
+      <form onSubmit={() => { navigate("/ReservationView", {state:{reserva}}) }} >
         <label htmlFor="number"></label>
         <input id="number" placeholder="Number Card" onBlur={setCardNumber} />
         {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}
