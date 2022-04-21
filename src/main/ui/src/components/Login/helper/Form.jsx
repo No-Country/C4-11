@@ -90,6 +90,8 @@ const IconVal = styled(FontAwesomeIcon)`
 `;
 
 const ButtonCentered = styled.div`
+    position: relative;
+    bottom: 20px;
     margin: 20px 0 20px 0;
     display: flex;
     justify-content: center;

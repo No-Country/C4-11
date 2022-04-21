@@ -6,7 +6,7 @@ import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
 import { month, sessions, zones } from "../../static.json"
 import { Link } from "react-router-dom"
-import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
+import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres, Bottom } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
   const [bookingDay, dispatch] = useReducer(reducer, date, getDaysToBook)
@@ -24,13 +24,13 @@ export default function Reservation({ date }) {
   const showReserva = () => { console.log("estamos en la reserva") };
   return (
     <Container >
-      <ContenedorPicker className="row ">
-        <ChoiceContainerUno className="col-4">
+      <ContenedorPicker >
+        <ChoiceContainerUno >
           <Label htmlFor="seats">Asientos </Label>
           <input id="seats" type="text" placeholder={bookingDay.seats}
             onBlur={setSeats} />
         </ChoiceContainerUno>
-        <ChoiceContainerDos className="col-4 ">
+        <ChoiceContainerDos >
           <Label htmlFor="session">Session </Label>
           <SelectSession className="select-session " id="session" value={bookingDay.session} onChange={setSession}>
             {sessions.map((s, i) =>
@@ -38,7 +38,7 @@ export default function Reservation({ date }) {
             )}
           </SelectSession>
         </ChoiceContainerDos>
-        <ChoiceContainerTres className="col-4">
+        <ChoiceContainerTres >
           <Label htmlFor="zone">Zone</Label>
           <SelectSession id="zone" value={bookingDay.zone} onChange={setZone}>
             <option value="">Elegir</option>
@@ -83,6 +83,7 @@ export default function Reservation({ date }) {
           : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
         }
       </ContenedorImagen>
+      <Bottom></Bottom>
     </Container>
   )
 }

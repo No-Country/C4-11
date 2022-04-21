@@ -8,9 +8,13 @@ text-align: center;
 const ContenedorPicker = styled.div`
 display: flex;
 justify-content: space-around;
-flex-wrap: wrap;
 margin-bottom: 5rem;
-width: 100%;
+
+    @media(max-width: 750px){
+        display: inline-block;
+        margin: auto;
+        
+    }
 `
 const ChoiceContainerUno = styled.div`
 
@@ -93,10 +97,15 @@ const BotonReservar = styled.button`
 const ContenedorImagen = styled.div`
 display:flex;
 justify-content: center;
-margin-bottom: 3rem;
+margin: auto;
+margin-bottom: 50px;
 `
 const Imagen = styled.img`
 border:2px solid goldenrod;
+    @media(max-width: 1100px){
+        width: 75%;
+    }
+
 `
 const ContenedorBotonReserva = styled.div`
 display: flex;
@@ -122,6 +131,8 @@ const BotonMesas = styled.button`
     border: 1px solid #C4C4C4 !important;   
 }    
 `
+const Bottom = styled.div`
+height: 100vh;
+`
 
-
-export { Container, BotonMesas,ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
+export { Container, BotonMesas,ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres, Bottom };
