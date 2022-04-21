@@ -175,6 +175,8 @@ const Parrafo = styled.p`
     margin-bottom: 1.5rem;
 
 `
+const Bottom = styled.div`
+    height: 100vh;
+`
 
-
-export { Container,Parrafo,BotonesConfirm, DivBotones,ButtonConfirm, BotonMesas, ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
+export { Container, Bottom, Parrafo,BotonesConfirm, DivBotones,ButtonConfirm, BotonMesas, ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
