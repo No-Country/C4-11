@@ -10,6 +10,7 @@ const Menu = () => {
    
   return (
     <>
+     <div className='empty'>
       <div className='title'>
         <h1>MENÚ</h1>
       </div>
@@ -36,12 +37,15 @@ const Menu = () => {
             <Link to={"/cervezas"}> <div><p className="card-text">CERVEZAS</p></div></Link>
             <div className='description-dish'><p>Clásicas y Artesanales</p></div>
           </div>
-        </div>
-        <div className='title-dishes'>
-        <NavLink to="/Cervezas" className={activeLink} style={{paddingRight:"50px"}}><p>CERVEZAS</p></NavLink>    
-        <NavLink to="/Pizza" className={activeLink}><p>PIZZAS</p></NavLink> 
-        <NavLink to="/Picada" className={activeLink}><p>PICADAS</p></NavLink> 
-        </div>
+        </div> 
+        <div>   
+          <div className='title-dishes'>
+          <NavLink to="/Cervezas" className={activeLink} ><p>CERVEZAS</p></NavLink>
+          <NavLink to="/Pizza"className={activeLink} ><p>PIZZAS</p></NavLink> 
+          <NavLink to="/Picada" className={activeLink}><p>PICADAS</p></NavLink> 
+          </div>
+      </div>   
+      </div>
 
       </div>
     </>

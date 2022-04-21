@@ -3,7 +3,7 @@ import React from 'react'
 const CardPizza = ({src, description}) => {
   return (
     <>
-
+    
     <div className='cards-dishes'>
       <div className="card-food">
           <div className='image'>

@@ -6,35 +6,35 @@ import beer4 from "../../assets/img/beer3.png";
 const dataBeer = [
     {
         src: beer1,
-        description: "Cerveza Artesanal"
+        description: "India Pale"
     },
     {
         src: beer2,
-        description: "Cerveza Artesanal"
+        description: "Amber Ale"
     },
     {
         src: beer3,
-        description: "Cerveza Artesanal"
+        description: "Golden Ale"
     },
     {
         src: beer4,
-        description: "Cerveza Artesanal"
+        description: "Hefe Weizen "
     },
     {
         src: beer1,
-        description: "Cerveza Artesanal"
+        description: "Stout"
     },
     {
         src: beer2,
-        description: "Cerveza Artesanal"
+        description: "Honey"
     },
     {
         src: beer3,
-        description: "Cerveza Artesanal"
+        description: "Pilsen Lager"
     },
     {
         src: beer4,
-        description: "Cerveza Artesanal"
+        description: "Golden"
     },
 
 

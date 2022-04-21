@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link className="nav-link" to={"/"}>CONTACTO</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link log" to={"/login"}>LOG IN
+        <Link className="nav-link log" to={"/login"}>
           <img src={log} alt="..."/>
         </Link>
         </li>
