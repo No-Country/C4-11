@@ -1,6 +1,7 @@
 import React from "react";
 import { useCard } from "./useCard";
 import { textCheck } from "../../utils/regex";
+import { Button,InputCardNumber,Email,DniNumber,PickerType,InputExpCcv, InputFullName } from "./Card.elements/Cardselements";
 
 export default function Card() {
   const { state, setCardNumber, setExpMonth, setExpYear, setFullName, setIdNumber, setEmail, validateInput, cleanErrors } = useCard();
@@ -10,36 +11,39 @@ export default function Card() {
   }
   console.log(state);
   return (
-    <>
+    <div className="container d-flex">
       <ul className='errors'>
         {state.errors.map((error, index) => (
           <li key={`e-${index}`}> {error} </li>
         ))}
       </ul>
-      <form onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
+      <form  className="row "onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
         <label htmlFor="number"></label>
-        <input id="number" placeholder="Number Card" onBlur={setCardNumber} />
-        {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}
+        <InputCardNumber  className="col-6" id="number" placeholder="Number Card" onBlur={setCardNumber} />
+        {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}        
         <label htmlFor="expMonth"></label>
-        <input id="expMonth" placeholder="MM" onBlur={setExpMonth} />
+        <InputExpCcv className="col-4" id="expMonth" placeholder="MM" onBlur={setExpMonth} />
         <label htmlFor="expYear"></label>
-        <input id="expYear" placeholder="YY" onBlur={setExpYear} />
+        <InputExpCcv className="col-4" id="expYear" placeholder="YY" onBlur={setExpYear} />
         <label htmlFor="seguridad"></label>
-        <input id="seguridad" placeholder="xxx" />
+        <InputExpCcv className="col-4" id="seguridad" placeholder="xxx" />
         <label htmlFor="fullName"></label>
-        <input id="fullName" placeholder="Full Name" onBlur={setFullName} />
+        <InputFullName className="col-6" id="fullName" placeholder="Full Name" onBlur={setFullName} />
         <label htmlFor="typeID"></label>
-        <select id="typeID">
+        <PickerType id="typeID"className="col-6">
           {state.type.map((s, i) =>
             <option key={i} value={i}>{s}</option>
           )}
-        </select>
+        </PickerType>
         <label htmlFor="idNumber"></label>
-        <input id="idNumber" placeholder="Id Number" onBlur={setIdNumber} />
+        <DniNumber className="col-6" id="idNumber" placeholder="Id Number" onBlur={setIdNumber} />
         <label htmlFor="email"></label>
-        <input id="email" placeholder="example@company.com" onBlur={setEmail} />
-        <button type="submit">CONFIRMAR</button>
+        <Email className="col-6" id="email" placeholder="example@company.com" onBlur={setEmail} />
+        <div >
+        <Button type="submit">CONFIRMAR</Button>
+        </div>
+        
       </form>
-    </>
+    </div >
   )
 }

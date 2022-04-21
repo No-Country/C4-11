@@ -36,7 +36,23 @@ flex-flow: row wrap;
 width: auto;
 height: auto;
 justify-content:center;
+
 margin-bottom: 3rem;
+`
+const ButtonConfirm = styled.button`
+display: flex;
+text-align: center;
+width: 100px;
+height: 80px;
+margin:3;
+padding: 10;
+border-radius: 5px;
+align-items: center;
+font-weight: bold;
+padding:12px;
+
+
+
 `
 const ButtonCalendar = styled.button`
 display: flex;
@@ -75,6 +91,7 @@ const TituloH3 = styled.h3`
 const TituloH1 = styled.h1`
     background-color: black;
     color: goldenrod;
+    margin-bottom: 3rem;
 `
 const BotonReservar = styled.button`
     width: 100px;
@@ -96,6 +113,25 @@ margin-bottom: 3rem;
 const Imagen = styled.img`
 border:2px solid goldenrod;
 `
+const BotonesConfirm = styled.button`
+    font-weight: bold;
+    background-color: black;
+    color: goldenrod;
+    border-radius: 5px;    
+    width: 130px;
+    margin-bottom:1rem;
+    margin-left: 1rem;
+    
+
+`
+const DivBotones = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+`
+
 const ContenedorBotonReserva = styled.div`
 display: flex;
 justify-content: center;
@@ -120,6 +156,14 @@ const BotonMesas = styled.button`
     border: 1px solid #C4C4C4 !important;   
 }    
 `
+const Parrafo = styled.p`
+    color:goldenrod;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+`
 
 
-export { Container, BotonMesas,ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
+export { Container,Parrafo,BotonesConfirm, DivBotones,ButtonConfirm, BotonMesas, ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
