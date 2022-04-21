@@ -41,8 +41,8 @@ const Menu = () => {
         <div>   
           <div className='title-dishes'>
           <NavLink to="/Cervezas" className={activeLink} ><p>CERVEZAS</p></NavLink>
-          <NavLink to="/Pizza"className={activeLink} ><p>PIZZAS</p></NavLink> 
-          <NavLink to="/Picada" className={activeLink}><p>PICADAS</p></NavLink> 
+          <NavLink to="/Pizza"className={activeLink} style={{paddingLeft:"30px"}}><p>PIZZAS</p></NavLink> 
+          <NavLink to="/Picada" className={activeLink} ><p>PICADAS</p></NavLink> 
           </div>
       </div>   
       </div>
