@@ -1,7 +1,9 @@
 import React from "react";
 import { useCard } from "./useCard";
 import { textCheck } from "../../utils/regex";
-import { Button, Display, Title, Container, InputCardNumber,Email,DniNumber,PickerType,InputExpCcv, InputFullName } from "./Card.elements/Cardselements";
+import Master from "../Card/img/master.png"
+import Visa from "../Card/img/visa.png"
+import { Button, Images, Label, Display, DisplayButton, Title, Container, InputCardNumber,Email, Form, DniNumber,PickerType,InputExpCcv, InputFullName } from "./Card.elements/Cardselements";
 
 export default function Card() {
   const { state, setCardNumber, setExpMonth, setExpYear, setFullName, setIdNumber, setEmail, validateInput, cleanErrors } = useCard();
@@ -12,54 +14,71 @@ export default function Card() {
   console.log(state);
   return (
     <Container>
-    <div className="container d-flex">
       <ul className='errors'>
         {state.errors.map((error, index) => (
           <li key={`e-${index}`}> {error} </li>
         ))}
       </ul>
+      <Form>
       <form  className="row "onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
         <Title>
-        <label htmlFor="number">NÚMERO DE TARJETA (SÓLO NÚMEROS)</label>
+        <Label htmlFor="number">NÚMERO DE TARJETA (SÓLO NÚMEROS)</Label>
        </Title>
-          <InputCardNumber  className="col-6" id="number" placeholder="Number Card" onBlur={setCardNumber} />
+          <InputCardNumber id="number" placeholder="Número de Tarjeta" onBlur={setCardNumber} />
+          <Images>
+            <img src={Master} alt="" />
+            <img src={Visa} alt="" />
+          </Images>
           {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}     
          <Display>   
            <Title>
-          <label htmlFor="expMonth">EXPIRACIÓN</label>
-          <InputExpCcv className="col-4" id="expMonth" placeholder="MM" onBlur={setExpMonth} />
+          <Label htmlFor="expMonth" style={{marginLeft:"-10px"}}>EXPIRACIÓN</Label>
+          <InputExpCcv  id="expMonth" placeholder="MM" onBlur={setExpMonth} />
          </Title> 
-          <label htmlFor="expYear"></label>
-          <InputExpCcv className="col-4" id="expYear" placeholder="YY" onBlur={setExpYear} />
-           
-          <label htmlFor="seguridad"></label>
-          <InputExpCcv className="col-4" id="seguridad" placeholder="xxx" />
-    
+           <Title>
+          <Label htmlFor="expYear"></Label>
+          <InputExpCcv  id="expYear" placeholder="YY" onBlur={setExpYear} />
+          </Title>
+           <Title>
+          <Label htmlFor="seguridad">CVV</Label>    
+          <InputExpCcv style={{marginLeft:"10px"}} id="seguridad" placeholder="xxx" />
+          </Title>
         </Display>
         <Title>
-           <label htmlFor="fullName">NOMBRE Y APELLIDO</label>
-          <InputFullName className="col-6" id="fullName" placeholder="Full Name" onBlur={setFullName} />
+           <Label htmlFor="fullName" style={{marginLeft:"10px"}}>NOMBRE Y APELLIDO</Label>
+          <InputFullName  id="fullName" placeholder="Nombre y Apellido" onBlur={setFullName} />
         </Title>  
-        <Display>
+      
           <Title>
-          <label htmlFor="typeID">TIPO DE DOCUMENTO Y DNI</label>
+          <Label htmlFor="typeID">TIPO DE DOCUMENTO Y DNI</Label>
           </Title>
-        <PickerType id="typeID"className="col-6">
+          <Display>
+        <PickerType id="typeID">
           {state.type.map((s, i) =>
             <option key={i} value={i}>{s}</option>
           )}
         </PickerType>
-        <label htmlFor="idNumber"></label>
+        <Label htmlFor="idNumber"></Label>
+    
+        <DniNumber className="col-6" id="idNumber" placeholder="Número de Documento" onBlur={setIdNumber} />
         </Display>
-        <DniNumber className="col-6" id="idNumber" placeholder="Id Number" onBlur={setIdNumber} />
-        <label htmlFor="email"></label>
+        <Title>
+        <Label htmlFor="email">MAIL</Label>
+        </Title>
         <Email className="col-6" id="email" placeholder="example@company.com" onBlur={setEmail} />
         <div >
-        <Button type="submit">CONFIRMAR</Button>
+        <DisplayButton>
+          <div className="button" style={{marginRight:"70px"}}>
+            <Button type="submit">CANCELAR</Button>
+          </div>
+          <div className="button">
+            <Button type="submit">CONFIRMAR</Button>
+          </div>  
+        </DisplayButton>  
         </div>
         
       </form>
-    </div >
+    </Form>
     </Container>
   )
 }

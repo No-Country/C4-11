@@ -24,7 +24,7 @@ const Login = () => {
                 password,
                     );
                 
-                window.location.href="/Reservas"
+                window.location.href="/Reserva"
             }else{
                 //Si se inicia sesión
                signInWithEmailAndPassword(

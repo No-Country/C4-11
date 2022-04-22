@@ -31,15 +31,14 @@ body{
 .navbar-brand{
     width: 40%;
 }
-.carousel{
-    top: -30px;
-}
+
 .carousel-item img{
+    position: relative;
     margin: auto;
     width: 30% !important;
-    height: 100vh;
-    top: -100px;
-    position: relative;
+    height: 80vh;
+    bottom: 20px;
+
 }
 .container-about{
     margin-top: 50px;
@@ -200,7 +199,7 @@ body{
 .empty{
     height: 1550px;
 }  
-@media  screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .title-dishes{
         visibility: visible;
         margin-top: 50px;
@@ -234,7 +233,7 @@ body{
 @media screen and (max-width: 642px) {
 
     .carousel-item img{
-        top: 10px;
+     
         height: 560px !important;
         object-fit: cover;
         width: 55% !important;
