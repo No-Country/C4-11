@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300&display=swap');
+.map{
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+ 
+}
+.texto-map{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+.ubicacion-contacto-container{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.55);
+}
+.titulo-contacto{
+    color: goldenrod;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.texto-contact{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+.input-group-text{
+    background-color: black;
+    border: goldenrod 1px solid;
+    color: goldenrod;
+}
+.button-consulta{
+    background-color: black;
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    padding: 10px 10px 10px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    margin-top: -20px;
+
+}
+.button-consulta:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    background-color: goldenrod;
+    color: black;
+
+}
+.map-container{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media only screen and (max-width: 1000px){
+    .map-container{
+        height: 30vh;
+    }
+}
+.texto-map{
+    color: white;
+    margin-bottom: 0;
+}
+.map-container-2{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-inputs{
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.parte-derecha{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; 
+}

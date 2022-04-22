@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+body{
+    background-color: black;
+}
+.nav-menu{
+    z-index: 10;
+    border: 1px solid yellow ;
+    margin: 5px;
+    background-color: black;
+}
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white !important;
+
+}
+.nav-link img{
+    position: relative;
+    width: 35px;
+    bottom: 4px;
+    filter: invert(100%);
+}
+.log{
+    position: relative;
+    bottom: 4.5px;
+}
+.nav-link:hover{
+    color: goldenrod !important;
+}
+.navbar-brand{
+    width: 40%;
+}
+.carousel{
+    top: -30px;
+}
+.carousel-item img{
+    margin: auto;
+    width: 30% !important;
+    height: 100vh;
+    top: -100px;
+    position: relative;
+}
+.container-about{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.content{
+    width: 40%;
+}
+.picture-about{
+    width: 40%;
+}
+.content h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: gold;
+}
+.content p{
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: white;
+}
+.picture-about img{
+    height: 70%;
+    width: 90%;
+}
+.title h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    color: gold;
+    text-align: start;
+    text-align: center;
+}
+.card{
+    width: 350px;
+    height: 220px;
+    border-radius: 20px ; 
+    transition: all 0.75s; 
+    margin: 15px;
+    border: none !important;
+}
+.card img{
+    border-radius: 20px;
+    height: 220px;
+}
+.card:hover{
+    /*box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
+    -webkit-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
+    -moz-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
+    */transform: translateY(-2px);
+}
+.card-body{
+    position: absolute;   
+    bottom: 0;  
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    height: 60px;
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+}
+.description-dish p{
+    font-size: 1.2rem;
+    color: black;
+}
+.card-body a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.cards-dishes{
+    position: relative;
+    top: -1420px;
+    left: 400px;
+    margin: 0px 10px 10px 0;
+    background-color: white;
+    width: 35%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.card-body-dishes{
+    margin: auto;
+}
+.title-dishes{
+   display: flex;
+   justify-content: space-around;
+   visibility: hidden;
+}
+
+.title-dishes a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    width: 10px;
+}
+
+@media screen and (max-width: 1500px){
+   .carousel-item img{
+       width: 50% !important;
+   }
+}
+@media  screen and (max-width: 1400px){
+    .cards-dishes{
+        left: 390px;
+        width: 34%;
+    }
+}
+@media  screen and (max-width: 1300px){
+    .cards-dishes{
+        width: 33%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .carousel-item img{
+        height: 850px !important;
+        object-fit: cover;
+        width: 55% !important;     
+    }
+    .card{
+        display: none;
+    }
+    .title-dishes{
+        visibility: visible;
+        margin: 50px 0px 20px 0px;
+        position: relative;
+        left: -60px;
+    }
+    .title h1{
+        display: none;
+    }
+    .cards-dishes .card-text{
+        font-size: 1.5rem;
+    }
+    .cards-dishes{  
+        top: 50px;
+        width: 80%;
+        left: 100px;
+        top: -1450px;
+    }
+    .picture-about img{
+        height: 70%;
+    }
+  }
+    .active{
+        color: yellow !important;   
+    }
+.empty{
+    height: 1550px;
+}  
+@media  screen and (max-width: 900px) {
+    .title-dishes{
+        visibility: visible;
+        margin-top: 50px;
+     }
+     .card{
+         display: none;
+     }
+     .title h1{
+         display: none;
+     }
+     .cards-dishes{
+         width: 90%;
+         margin-left: -55px;
+     }
+     .picture-about img{
+        height: 60vh;
+    }
+}
+@media  screen and (max-width: 750px){
+    .cards-dishes{
+        margin-left: -60px;
+    }
+    .picture-about img{
+        height: 55vh;
+    }
+    .title-dishes a{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 642px) {
+
+    .carousel-item img{
+        top: 10px;
+        height: 560px !important;
+        object-fit: cover;
+        width: 55% !important;
+    }
+    .content p{
+        font-size: 1.2rem;
+    }
+    .picture{
+        width: 50%;
+    }
+    .content{
+        width: 70%;
+    }
+    .cards-dishes{
+        margin-left: -70px;
+    }
+    .cards-dishes .card-text{
+        font-size: 1.4rem;
+    }
+    .title-dishes{
+        position: relative;
+        left: -50px;
+    }
+    .title-dishes a{
+        font-size: 1.3rem;
+        margin-right: 90px;
+   
+    }
+
+    .picture-about img{
+        height: 50vh;
+    }
+    .title-dishes a{
+        margin-left: 60px;
+    }
+
+  }
+
+@media screen and (max-width: 500px){
+   
+    .cards-dishes .card-text{
+        font-size: 1.2rem;
+    }
+    .cards-dishes{
+        margin-left: -85px;
+        width: 95%;
+    }
+    .picture-about img{
+        height: 40vh;
+    }
+    .title-dishes{
+        position: relative;
+        left: -40px;
+    }
+    .title-dishes a{
+        margin-right: 70px;    
+    }
+    .title-dishes a:hover{
+        color: goldenrod;
+    }
+}
+@media screen and (max-width: 450px){
+    .cards-dishes .card-text{
+        font-size: 1.1rem;
+        margin-left: -65px;
+    }
+    .cards-dishes{
+        left: 45px;
+        margin-left: -35px;
+    }
+  
+    .picture-about img{
+        height: 35vh;
+    }
+    .carousel-item img{
+        width: 60% !important;
+    }
+
+}
+@media screen and (max-width: 376px){
+    .picture-about{
+        position: relative;
+        bottom: 10px;
+    }
+    .title-dishes a{
+        position: relative;
+        left: 50px;
+        margin-left: -40px;    
+    }
+}
+@media screen and (max-width: 360px){
+    .content p{
+        font-size: 0.8rem;
+    }
+    .content{
+        margin-top: -40px;
+    }
+    .picture-about{
+        margin-bottom: 10px;
+    }
+    .title-dishes a{
+        margin-right: 40px;
+        padding-right: 20px;
+    }
+}

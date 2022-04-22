@@ -1,0 +1,38 @@
+{
+  "month": [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+  ],
+  "sessions": [
+    "Tarde",
+    "Prime",
+    "Madrugada"
+  ],
+  "zones": [
+    "A",
+    "B",
+    "C"
+  ],
+  "hora":["19-21 hs", "21-00 hs","00-03 hs"],
+  "seats": [
+    [4, 4, 6, 2, 2],
+    [2, 2, 4, 2, 4, 4],
+    [6, 6, 6]
+  ],
+  "imagesZones":[
+    "https://i.postimg.cc/RhtzsrQm/a-zone.png",
+    "https://i.postimg.cc/zDH5XWmQ/b-zone.png",
+    "https://i.postimg.cc/gk9pwJm2/c-zone.png"
+  ]
+
+}
