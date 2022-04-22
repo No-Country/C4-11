@@ -1,6 +1,5 @@
 // ! Al llamar al componente lleva como prop el "Date()" actual
 // ? {/* <Reservation date={new Date()} /> */}
-import tableMap from "../Reservation/img/tableMap.png"
 import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
@@ -28,8 +27,7 @@ export default function Reservation({ date }) {
       <ContenedorPicker >
         <ChoiceContainerUno >
           <Label htmlFor="seats">Asientos </Label>
-          <input id="seats" type="text" placeholder={bookingDay.seats}
-            onBlur={setSeats} />
+          <input id="seats" type="text" placeholder={bookingDay.seats} onBlur={setSeats} />
         </ChoiceContainerUno>
         <ChoiceContainerDos >
           <Label htmlFor="session">Session </Label>
@@ -74,7 +72,7 @@ export default function Reservation({ date }) {
       <ContenedorBotonReserva>
         {bookingDay.choiceTable >= 0 &&
           <BotonReservar onClick={() =>
-            navigate("/card", {state: {reserva: bookingDay} })}> Reservar Mesa</BotonReservar>
+            navigate("/card", { state: { reserva: bookingDay } })}> Reservar Mesa</BotonReservar>
         }
       </ContenedorBotonReserva>
       <ContenedorImagen className="map ">

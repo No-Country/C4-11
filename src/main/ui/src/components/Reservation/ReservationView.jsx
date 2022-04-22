@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom"
+import { month, hora, zones } from '../../static.json'
 import { Container, BotonesConfirm, TituloH1, DivBotones, ButtonConfirm, Parrafo, Calendar } from "./Elements-Reservation/Elements"
 
 export default function ReservationView() {
@@ -11,21 +12,40 @@ export default function ReservationView() {
         <TituloH1>Datos de la reserva</TituloH1>
       </div>
       <Calendar className='row'>
-        <ButtonConfirm className='card col-4'><span>Personas</span>4</ButtonConfirm>
-        <ButtonConfirm className='card col-4'><span>Dia</span>30/07</ButtonConfirm>
-        <ButtonConfirm className='card col-4'><span>Hora</span>20:30</ButtonConfirm>
+        <ButtonConfirm className='card col-4'>
+          <span>Personas</span>
+          {reserva.seats}
+        </ButtonConfirm>
+        <ButtonConfirm className='card col-4'>
+          <span>{month[reserva.date.getMonth()]}</span>
+          {reserva.date.getDate()}
+        </ButtonConfirm>
+        <ButtonConfirm className='card col-4'>
+          <span>Hora</span>
+          {hora[reserva.session]}
+        </ButtonConfirm>
       </Calendar>
       <div>
-        <Parrafo htmlFor="">$500</Parrafo>
-        <Parrafo htmlFor="">Mesa C6</Parrafo>
-        <Parrafo htmlFor="">Email</Parrafo>
+        <Parrafo htmlFor="">
+          $ {reserva.seats * 700}
+        </Parrafo>
+        <Parrafo htmlFor="">
+          Mesa {zones[reserva.zone]}{reserva.seats}
+        </Parrafo>
+        {/* // TODO: pasar el mail desde card */}
+        <Parrafo htmlFor="">
+          Email
+        </Parrafo>
       </div>
       <DivBotones >
-        <BotonesConfirm >Volver al Menu</BotonesConfirm>
-        <BotonesConfirm>Crear Usuario</BotonesConfirm>
+        {/* // TODO: linkear botones */}
+        <BotonesConfirm >
+          Volver al Menu
+        </BotonesConfirm>
+        <BotonesConfirm>
+          Crear Usuario
+        </BotonesConfirm>
       </DivBotones>
-
     </Container>
   )
-
 }
