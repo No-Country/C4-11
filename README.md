@@ -2,7 +2,7 @@
 
 ## Overview
 
-WebApp para cervezería con reservas y ocupación de lugares
+WebApp para cervecería con reservas y ocupación de lugares
 
 ## Links
 
