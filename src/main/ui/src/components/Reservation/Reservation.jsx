@@ -4,13 +4,14 @@ import tableMap from "../Reservation/img/tableMap.png"
 import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
-import { month, sessions, zones } from "../../static.json"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { month, sessions, zones, imagesZones } from "../../static.json"
 import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres, Bottom } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
   const [bookingDay, dispatch] = useReducer(reducer, date, getDaysToBook)
   console.log(bookingDay)
+  const navigate = useNavigate();
   const setSeats = e => {
     dispatch({ type: "SET_SEATS", payload: e.target.value })
   }
@@ -21,7 +22,7 @@ export default function Reservation({ date }) {
   const setZone = e => {
     dispatch({ type: "SET_ZONE", payload: e.target.value })
   }
-  const showReserva = () => { console.log("estamos en la reserva") };
+
   return (
     <Container >
       <ContenedorPicker >
@@ -52,7 +53,7 @@ export default function Reservation({ date }) {
         {
           bookingDay.days.map((day, i) => (
             <ButtonCalendar key={i} className="card "
-              onClick={() => dispatch({ type: "SELECT_DAY", payload: i })}            >
+              onClick={() => dispatch({ type: "SELECT_DAY", payload: i })}>
               <p style={i === bookingDay.date ? { fontWeight: "bolder" } : null}>{day.getDate()}</p>
               <p>{month[day.getMonth()]}</p>
             </ButtonCalendar>
@@ -72,15 +73,14 @@ export default function Reservation({ date }) {
       </div>
       <ContenedorBotonReserva>
         {bookingDay.choiceTable >= 0 &&
-          <Link to="/card">
-            <BotonReservar onClick={showReserva}> Reservar Mesa</BotonReservar>
-          </Link>
+          <BotonReservar onClick={() =>
+            navigate("/card", {state: {reserva: bookingDay} })}> Reservar Mesa</BotonReservar>
         }
       </ContenedorBotonReserva>
       <ContenedorImagen className="map ">
         {bookingDay.zone
-          ? <Label>mapa {zones[bookingDay.zone]}</Label>
-          : <Imagen src={tableMap} alt="foto" />
+          ? <Imagen src={imagesZones[bookingDay.zone]} />
+          : <Imagen src="https://i.postimg.cc/Fsj404Hg/zonas.png" alt="foto" />
         }
       </ContenedorImagen>
       <Bottom></Bottom>

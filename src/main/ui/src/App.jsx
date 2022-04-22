@@ -12,6 +12,7 @@ import Login from "./components/Login/Login"
 import { Footer } from './components/Footer/Footer';
 import Reservation from "./components/Reservation/Reservation"
 import Card from "./components/Card/Card";
+import ReservationView from "./components/Reservation/ReservationView"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
           <Route exact path="/Card" element={<Card />} />
+          <Route exact path="/ReservationView" element={<ReservationView />} />
           <Route path="*" element={<Carrousel />} />
         </Routes>         
         <Footer />
