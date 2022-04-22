@@ -20,7 +20,7 @@ export function getDaysToBook(forDate, daysOffset = 0) {
   return {
     date,
     days,
-    seats: 0,
+    seats: 1,
     session: 0,
     zone: undefined,
     tables: undefined,

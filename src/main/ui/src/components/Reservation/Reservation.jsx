@@ -4,8 +4,8 @@
 import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
-import { month, sessions, zones } from "../../static.json"
-import { Link, useNavigate } from "react-router-dom"
+import { month, sessions, zones, imagesZones } from "../../static.json"
+import { useNavigate } from "react-router-dom"
 import { Calendar, BotonMesas, ContenedorBotonReserva, ButtonCalendar, Imagen, ContenedorImagen, BotonReservar, SelectSession, Label, Container, ChoiceContainerUno, TituloH3, TituloH1, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres } from "./Elements-Reservation/Elements"
 
 export default function Reservation({ date }) {
@@ -79,8 +79,8 @@ export default function Reservation({ date }) {
       </ContenedorBotonReserva>
       <ContenedorImagen className="map ">
         {bookingDay.zone
-          ? <Label>mapa {zones[bookingDay.zone]}</Label>
-          : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
+          ? <Imagen src={imagesZones[bookingDay.zone]} />
+          : <Imagen src="https://i.postimg.cc/Fsj404Hg/zonas.png" alt="foto" />
         }
       </ContenedorImagen>
     </Container>
