@@ -119,6 +119,7 @@ margin-bottom: 50px;
 `
 const Imagen = styled.img`
 border:2px solid goldenrod;
+width: 50%;
     @media(max-width: 1100px){
         width: 75%;
     }
@@ -179,4 +180,4 @@ const Bottom = styled.div`
     height: 100vh;
 `
 
-export { Container, Bottom, Parrafo,BotonesConfirm, DivBotones,ButtonConfirm, BotonMesas, ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };
+export { Container,Bottom, Parrafo,BotonesConfirm, DivBotones,ButtonConfirm, BotonMesas, ContenedorBotonReserva, ContenedorImagen, Imagen, BotonReservar, TituloH3, TituloH1, SelectSession, Calendar, ButtonCalendar, Label, ChoiceContainerUno, ChoiceContainerDos, ContenedorPicker, ChoiceContainerTres };

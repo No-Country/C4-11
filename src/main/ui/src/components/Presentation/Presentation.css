@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 .img-presentation{
     width: 163px;
     height: 320px;
     margin: auto;
 }
-
-.presentation{
-     
+.titulo-nuestras-pintas{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 600px){
+    .container-titulo h2{
+        font-size: 2.5rem !important;
+    }
+}
+@media screen and (max-width: 460px){
+    .container-titulo h2{
+        font-size: 2rem !important;
+    }
+}
+.presentation{    
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -21,8 +37,10 @@
     width: 80%;
     margin: auto;
     margin-top: 20px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 .tittle-presentation{
     color: goldenrod;
@@ -39,7 +57,7 @@
     position: relative;
     align-items: center;
     backface-visibility: hidden;
-    width: 400px;
+    width: 300px;
     height: 500px;
 }
 .container-cervezas{

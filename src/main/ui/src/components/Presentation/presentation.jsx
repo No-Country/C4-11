@@ -36,7 +36,7 @@ export const Presentation=()=>{
 return(
     <div className="container-presentation">
     <div className="container-titulo d-flex justify-content-center">
-            <h2 className="titulo-nuestras-pintas">Pintas de la casa</h2>
+            <h2 className="titulo-nuestras-pintas">PINTAS DE LA CASA</h2><br></br>
         </div>
     <div className=" presentation">
         

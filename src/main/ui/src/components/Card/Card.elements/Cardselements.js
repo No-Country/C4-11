@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 //Boton confirmar formulario
 const Button = styled.button`
 width: 150px;
@@ -74,5 +75,19 @@ border:1px solid transparent;
     outline: none;
 }
 `
-
-export { Button, InputCardNumber,PickerType,Email,DniNumber,InputExpCcv ,InputFullName};
+const Display = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+`
+const Container = styled.div`
+    display: block;
+   
+`
+const Title = styled.h2`
+    font-size: 1rem;
+    color: goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+`
+export { Button, Title, Container, Display, InputCardNumber,PickerType,Email,DniNumber,InputExpCcv ,InputFullName};
