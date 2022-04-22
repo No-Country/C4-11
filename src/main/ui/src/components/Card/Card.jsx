@@ -1,7 +1,7 @@
 import React from "react";
 import { useCard } from "./useCard";
 import { textCheck } from "../../utils/regex";
-import { Button,InputCardNumber,Email,DniNumber,PickerType,InputExpCcv, InputFullName } from "./Card.elements/Cardselements";
+import { Button, Display, Title, Container, InputCardNumber,Email,DniNumber,PickerType,InputExpCcv, InputFullName } from "./Card.elements/Cardselements";
 
 export default function Card() {
   const { state, setCardNumber, setExpMonth, setExpYear, setFullName, setIdNumber, setEmail, validateInput, cleanErrors } = useCard();
@@ -11,6 +11,7 @@ export default function Card() {
   }
   console.log(state);
   return (
+    <Container>
     <div className="container d-flex">
       <ul className='errors'>
         {state.errors.map((error, index) => (
@@ -18,24 +19,38 @@ export default function Card() {
         ))}
       </ul>
       <form  className="row "onSubmit={()=>console.log("Aqui muestro la reserva completa")}>
-        <label htmlFor="number"></label>
-        <InputCardNumber  className="col-6" id="number" placeholder="Number Card" onBlur={setCardNumber} />
-        {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}        
-        <label htmlFor="expMonth"></label>
-        <InputExpCcv className="col-4" id="expMonth" placeholder="MM" onBlur={setExpMonth} />
-        <label htmlFor="expYear"></label>
-        <InputExpCcv className="col-4" id="expYear" placeholder="YY" onBlur={setExpYear} />
-        <label htmlFor="seguridad"></label>
-        <InputExpCcv className="col-4" id="seguridad" placeholder="xxx" />
-        <label htmlFor="fullName"></label>
-        <InputFullName className="col-6" id="fullName" placeholder="Full Name" onBlur={setFullName} />
-        <label htmlFor="typeID"></label>
+        <Title>
+        <label htmlFor="number">NÚMERO DE TARJETA (SÓLO NÚMEROS)</label>
+       </Title>
+          <InputCardNumber  className="col-6" id="number" placeholder="Number Card" onBlur={setCardNumber} />
+          {/* // ? aquí poner imagenes de las tarjetas en la comprobación */}     
+         <Display>   
+           <Title>
+          <label htmlFor="expMonth">EXPIRACIÓN</label>
+          <InputExpCcv className="col-4" id="expMonth" placeholder="MM" onBlur={setExpMonth} />
+         </Title> 
+          <label htmlFor="expYear"></label>
+          <InputExpCcv className="col-4" id="expYear" placeholder="YY" onBlur={setExpYear} />
+           
+          <label htmlFor="seguridad"></label>
+          <InputExpCcv className="col-4" id="seguridad" placeholder="xxx" />
+    
+        </Display>
+        <Title>
+           <label htmlFor="fullName">NOMBRE Y APELLIDO</label>
+          <InputFullName className="col-6" id="fullName" placeholder="Full Name" onBlur={setFullName} />
+        </Title>  
+        <Display>
+          <Title>
+          <label htmlFor="typeID">TIPO DE DOCUMENTO Y DNI</label>
+          </Title>
         <PickerType id="typeID"className="col-6">
           {state.type.map((s, i) =>
             <option key={i} value={i}>{s}</option>
           )}
         </PickerType>
         <label htmlFor="idNumber"></label>
+        </Display>
         <DniNumber className="col-6" id="idNumber" placeholder="Id Number" onBlur={setIdNumber} />
         <label htmlFor="email"></label>
         <Email className="col-6" id="email" placeholder="example@company.com" onBlur={setEmail} />
@@ -45,5 +60,6 @@ export default function Card() {
         
       </form>
     </div >
+    </Container>
   )
 }

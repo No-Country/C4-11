@@ -1,6 +1,6 @@
 // ! Al llamar al componente lleva como prop el "Date()" actual
 // ? {/* <Reservation date={new Date()} /> */}
-
+import tableMap from "../Reservation/img/tableMap.png"
 import React, { useReducer } from "react"
 import { getDaysToBook } from "../../utils/date-wrangler"
 import reducer from "./reservationReducer"
@@ -80,7 +80,7 @@ export default function Reservation({ date }) {
       <ContenedorImagen className="map ">
         {bookingDay.zone
           ? <Label>mapa {zones[bookingDay.zone]}</Label>
-          : <Imagen src="https://i.postimg.cc/j28xY5Zb/imagen-2022-04-19-204857361.png" alt="foto" />
+          : <Imagen src={tableMap} alt="foto" />
         }
       </ContenedorImagen>
       <Bottom></Bottom>
