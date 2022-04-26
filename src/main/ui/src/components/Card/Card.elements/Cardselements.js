@@ -19,7 +19,7 @@ background-color: black;
 `
 //Input numero de tarjeta
 const InputCardNumber = styled.input`
-width: 400px;
+width: 402px;
 height: 30px;
 margin-left: 30px;
 border-radius: 5px;
