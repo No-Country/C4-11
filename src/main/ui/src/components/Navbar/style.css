@@ -40,35 +40,7 @@ body{
     bottom: 20px;
 
 }
-.container-about{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 
-}
-.content{
-    width: 40%;
-}
-.picture-about{
-    width: 40%;
-}
-.content h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    color: gold;
-}
-.content p{
-    margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 1.5rem;
-    color: white;
-}
-.picture-about img{
-    height: 70%;
-    width: 90%;
-}
 .title h1{
     font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
@@ -119,7 +91,6 @@ body{
     font-weight: 600;
     color: black;
 }
-
 .cards-dishes{
     position: relative;
     top: -1420px;
@@ -214,16 +185,10 @@ body{
          width: 90%;
          margin-left: -55px;
      }
-     .picture-about img{
-        height: 60vh;
-    }
 }
 @media  screen and (max-width: 750px){
     .cards-dishes{
         margin-left: -60px;
-    }
-    .picture-about img{
-        height: 55vh;
     }
     .title-dishes a{
         margin-left: 50px;
@@ -238,15 +203,10 @@ body{
         object-fit: cover;
         width: 55% !important;
     }
-    .content p{
-        font-size: 1.2rem;
-    }
     .picture{
         width: 50%;
     }
-    .content{
-        width: 70%;
-    }
+
     .cards-dishes{
         margin-left: -70px;
     }
@@ -263,9 +223,6 @@ body{
    
     }
 
-    .picture-about img{
-        height: 50vh;
-    }
     .title-dishes a{
         margin-left: 60px;
     }
@@ -281,9 +238,7 @@ body{
         margin-left: -85px;
         width: 95%;
     }
-    .picture-about img{
-        height: 40vh;
-    }
+
     .title-dishes{
         position: relative;
         left: -40px;
@@ -304,20 +259,14 @@ body{
         left: 45px;
         margin-left: -35px;
     }
-  
-    .picture-about img{
-        height: 35vh;
-    }
+
     .carousel-item img{
         width: 60% !important;
     }
 
 }
 @media screen and (max-width: 376px){
-    .picture-about{
-        position: relative;
-        bottom: 10px;
-    }
+
     .title-dishes a{
         position: relative;
         left: 50px;
@@ -325,15 +274,6 @@ body{
     }
 }
 @media screen and (max-width: 360px){
-    .content p{
-        font-size: 0.8rem;
-    }
-    .content{
-        margin-top: -40px;
-    }
-    .picture-about{
-        margin-bottom: 10px;
-    }
     .title-dishes a{
         margin-right: 40px;
         padding-right: 20px;
