@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createContext, useState} from "react";
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
@@ -12,11 +12,23 @@ import Login from "./components/Login/Login"
 import { Footer } from './components/Footer/Footer';
 import Reservation from "./components/Reservation/Reservation"
 import Card from "./components/Card/Card";
+import ReactSwitch from "react-switch"
+
+export const ThemeContext = createContext(null)
 
 function App() {
+  const [theme, setTheme] = useState("dark")
+  const toggleTheme = () => {
+    setTheme((mode) => (mode === "dark" ? "light" : "dark"))
+  }
   return (
-    <>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+       <div className="switch">
+         <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>  
+      </div>
       <Router>
+        
+      <div id={theme}>      
         <Navbar />
         <Routes>
           <Route index element={<Carrousel />} />
@@ -31,11 +43,14 @@ function App() {
           <Route exact path="/Reserva" element={<Reservation date={new Date()} />} />
           <Route exact path="/Card" element={<Card />} />
           <Route path="*" element={<Carrousel />} />
-        </Routes>         
+        </Routes>       
         <Footer />
+       </div>  
       </Router>
-    </>
+    </ThemeContext.Provider>
+    
   )
 }
 
 export default App
+

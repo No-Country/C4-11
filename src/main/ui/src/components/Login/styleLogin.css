@@ -6,7 +6,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 main{
-    height: 100vh;
+    height: 700px;
     max-width: 800px;
     width: 90%;
     margin: auto;

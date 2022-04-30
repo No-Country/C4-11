@@ -4,26 +4,13 @@ body{
     background-color: black;
 }
 .nav-menu{
-    z-index: 10;
     border: 1px solid yellow ;
-    margin: 5px;
     background-color: black;
 }
 .nav-link{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: white !important;
-
-}
-.nav-link img{
-    position: relative;
-    width: 35px;
-    bottom: 4px;
-    filter: invert(100%);
-}
-.log{
-    position: relative;
-    bottom: 4.5px;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 100;
+    color: white !important; 
 }
 .nav-link:hover{
     color: goldenrod !important;
@@ -31,16 +18,13 @@ body{
 .navbar-brand{
     width: 40%;
 }
-
 .carousel-item img{
     position: relative;
     margin: auto;
     width: 30% !important;
     height: 80vh;
     bottom: 20px;
-
 }
-
 .title h1{
     font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
@@ -51,8 +35,8 @@ body{
     text-align: center;
 }
 .card{
-    width: 350px;
-    height: 220px;
+    width: 360px;
+    height: 210px;
     border-radius: 20px ; 
     transition: all 0.75s; 
     margin: 15px;
@@ -60,40 +44,30 @@ body{
 }
 .card img{
     border-radius: 20px;
-    height: 220px;
-}
-.card:hover{
-    /*box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
-    -webkit-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
-    -moz-box-shadow: -4px 17px 31px -1px rgba(0,0,0,0.77);
-    */transform: translateY(-2px);
+    height: 210px;
 }
 .card-body{
     position: absolute;   
     bottom: 0;  
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 1.5rem;
     background-color: rgb(255, 255, 255);
     border-radius: 0 0 20px 20px;
     width: 100%;
     height: 60px;
-    transition: 1s;
     display: flex;
     justify-content: space-between;
 }
 .description-dish p{
     font-size: 1.2rem;
-    color: black;
 }
 .card-body a{
-    font-size: 1.2rem;
+    font-size: 1.2em;
     text-decoration: none;
     font-weight: 600;
     color: black;
 }
 .cards-dishes{
     position: relative;
-    top: -1420px;
+    top: -1440px;
     left: 400px;
     margin: 0px 10px 10px 0;
     background-color: white;
@@ -109,14 +83,47 @@ body{
    justify-content: space-around;
    visibility: hidden;
 }
-
 .title-dishes a{
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
     width: 10px;
 }
+#light{
+    background-color: rgb(161, 161, 161);
+    color: black;
+}
 
+#dark{
+    background-color: black;
+    color: white;
+}
+
+.switch{
+    position: absolute;
+    top: 38px;
+    right: 15px;
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+    z-index: 10;
+}
+.top{
+    position: fixed;
+    bottom: 100px;
+    right: 15px;
+    filter: invert(100%);
+    scroll-behavior: smooth;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+}
+@media screen and (max-width: 992px){
+    .switch{
+        right: 85px;
+    }
+}
 @media screen and (max-width: 1500px){
    .carousel-item img{
        width: 50% !important;

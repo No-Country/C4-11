@@ -4,16 +4,17 @@
     height: 100%;
     width: 90%;
     border-radius: 20px;
- 
 }
 .texto-map{
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
 }
+#light .texto-map{
+    color: black;
+    font-weight: 600;
+}
 .ubicacion-contacto-container{
-    background-color: rgb(0, 0, 0);
     padding: 20px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.55);
 }
 .titulo-contacto{
     color: goldenrod;
@@ -24,7 +25,11 @@
 .texto-contact{
     color:white;
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
+}
+#light .texto-contact{
+    color: black;
+    font-weight: 600;
 }
 .input-group-text{
     background-color: black;

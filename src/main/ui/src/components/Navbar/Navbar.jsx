@@ -2,12 +2,12 @@ import React from 'react';
 import logo from "../../assets/img/logo.png";
 import "./style.css";
 import { Link } from 'react-router-dom';
-import log from "../Login/img/log.png"
+import arrow from "./img/arrow.png"
 
 const Navbar = () => {
-  return (
-    <>
-    <nav className="navbar nav-menu navbar-expand-lg navbar-dark">
+  return(
+    <> 
+    <nav className="navbar nav-menu navbar-expand-lg navbar-dark" id='top'>
   <div className="container-fluid">
     <a href="/"> 
       <img className="navbar-brand" src={logo} alt="..." />
@@ -36,15 +36,17 @@ const Navbar = () => {
         <Link className="nav-link" to={"/"}>CONTACTO</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link log" to={"/login"}>
-          <img src={log} alt="..."/>
+        <Link className="nav-link" to={"/login"}>
+          LOG IN
         </Link>
         </li>
       </ul>
-    
     </div>
   </div>
-</nav>
+</nav>  
+<a href={"#top"}>
+  <img  className='top' src={arrow} alt="" />
+</a>  
 </>
   )
 }

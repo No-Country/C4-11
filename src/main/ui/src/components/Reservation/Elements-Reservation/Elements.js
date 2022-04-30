@@ -4,26 +4,34 @@ const Container = styled.div`
 display:flex;
 flex-flow: column wrap;
 text-align: center;
+margin-top: 50px;
 `
 const ContenedorPicker = styled.div`
 display: flex;
+flex-wrap: wrap;
+width: 700px;
 justify-content: space-around;
+margin: auto;
 margin-bottom: 5rem;
+    @media(max-width: 700px){
+        width: 550px;
 
-    @media(max-width: 750px){
-        display: inline-block;
+    }
+
+    @media(max-width: 580px){
+        width: 300px;
         margin: auto;
-        
+        flex-wrap: wrap;
     }
 `
 const ChoiceContainerUno = styled.div`
 
 `
 const ChoiceContainerDos = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
 const ChoiceContainerTres = styled.div`
 
@@ -57,8 +65,6 @@ align-items: center;
 font-weight: bold;
 padding:12px;
 
-
-
 `
 const ButtonCalendar = styled.button`
 display: flex;
@@ -85,14 +91,14 @@ cursor: pointer;
 `
 const Label = styled.label`
     color:goldenrod;
-    font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
+    font-weight: 600;
 `
 const TituloH3 = styled.h3`
-    background-color: black;
     color: goldenrod;
     margin-bottom: 3rem;
+    font-weight: 600;
 `
 const TituloH1 = styled.h1`
     background-color: black;

@@ -5,7 +5,6 @@ const About = () => {
   return (
     <div className='about-container'>
         <div className='about-content'>
-  
           <h1>QUIÉNES SOMOS</h1>
             <p>Beer Time se encuentra ubicado en Puerto Madero, uno de los principales sitios turísticos de la ciudad de Buenos Aires</p>.
             <p>Desde 30 de febrero de 2019 abrió sus puertas al público.</p>
